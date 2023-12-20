@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "sass": "node-sass assets/scss/app.scss assets/css/app.css",
+    "sassmini": "node-sass assets/scss/app.scss assets/css/app.css    --output-style compressed",
+    "sasstheme": "node-sass assets/scss/theme.scss assets/css/theme.css",
+    "sassthememini": "node-sass assets/scss/theme.scss assets/css/theme.css   --output-style compressed"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}

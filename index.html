@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+          content="Shopwise is Powerful features and You Can Use The Perfect Build this Template For Any eCommerce Website. The template is built for sell Fashion Products, Shoes, Bags, Cosmetics, Clothes, Sunglasses, Furniture, Kids Products, Electronics, Stationery Products and Sporting Goods.">
+    <meta name="keywords"
+          content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store">
+
+    <!-- SITE TITLE -->
+    <title>Rozetka</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <!-- Latest Bootstrap min CSS -->
+    <!--    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/linearicons.css">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/simple-line-icons.css">
+    <!--- owl carousel CSS-->
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.default.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
+    <!-- Style CSS -->
+    <!--    <link rel="stylesheet" href="/assets/css/style.css">-->
+    <!--    <link rel="stylesheet" href="/assets/css/responsive.css">-->
+
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="preloader">
+    <div class="lds-ellipsis">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+
+<!-- START HEADER -->
+
+<!--    Main panel-->
+<header class="header_wrap sticky">
+    <div class="custom-container">
+        <!--        Desktop menu-->
+        <div class="row bg-black h-70 d-none d-lg-flex">
+            <div class="col-auto d-flex d-xl-none align-items-center p-0">
+                <button
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu"
+                        class="btn btn-lg me-1 p-1 border-0"
+                >
+                    <i class="bi bi-list m-0" style="font-size: 34px; color: #595757"></i>
+                </button>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-3 p17">
+                <a href="/">
+                    <img style="height: 36px;" src="newimg/logo.svg" alt="">
+                </a>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3">
+                <button
+                        type="button"
+                        class="btn btn-lg btn-primary w-100 search-vcenter d-xl-none"
+                        data-bs-toggle="modal"
+                        data-bs-target="#mobileCatalogModal"
+                >
+                    <i class="bi bi-grid-fill title2"></i> Каталог
+                </button>
+                <button
+                        type="button"
+                        class="btn btn-lg btn-primary w-100 search-vcenter d-none d-xl-inline-block"
+                        data-bs-toggle="modal"
+                        data-bs-target="#catalogModal"
+                >
+                    <i class="bi bi-grid-fill title2"></i> Каталог
+                </button>
+            </div>
+
+            <div class="col-xl-7 col-lg col-xl-5 col-md-4">
+                <div class="input-group input-group-lg search-vcenter">
+                    <input type="text" class="form-control input-text-padding border-end-0"
+                           style="border-color: #595757"
+                           placeholder="Пошук товарів">
+                    <button type="button" class="btn white bggreen border-start-0" style="border-color: #595757">
+                        <i class="bi bi-search "></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-2">
+                <ul class="navbar-nav attr-nav navbar-expand-lg justify-content-end" style="margin-top: 18px">
+                    <div class="d-flex p-0">
+
+                        <div class="">
+                            <li class="dropdown cart_dropdown">
+                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
+                                   data-bs-target="#exampleModalCenter">
+                                    <span
+                                            class="cart_count">2</span>
+                                    <span class="amount"><span class="currency_symbol"></span></span></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--        Mobile menu-->
+        <div class="row h-70 bg-black d-lg-none d-flex">
+            <div class="col-auto d-flex align-items-center p-0">
+
+                <a href="/" class="me-3 px-2">
+                    <img style="height: 36px;" src="newimg/logo.svg" alt="">
+                </a>
+            </div>
+
+            <div class="col d-flex align-items-center p-0">
+                <div class="input-group input-group-lg">
+                    <input type="text"
+                           class="form-control border-pink p-0 input-text-padding border-end-0"
+                           placeholder="Пошук товарів"
+                           style="border-color: #595757"
+                    >
+                    <button type="button" class="btn white bggreen border-start-0" style="border-color: #595757">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-2 align-self-center">
+                <ul class="navbar-nav attr-nav navbar-expand-lg justify-content-center">
+                    <div class="row p-0">
+                        <div class="col-12 p-0">
+                            <li class="dropdown cart_dropdown">
+                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
+                                   data-bs-target="#exampleModalCenter">
+                                    <?php include 'components/svg/basket.php'; ?>
+                                    <span class="cart_count">2</span>
+                                    <span class="amount"><span class="currency_symbol"></span></span></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- END HEADER -->
+
+<!-- END MAIN CONTENT -->
+<div class="main_content">
+
+    <!-- START SECTION SHOP -->
+    <div class=" pb-0 ">
+        <div class="custom-container pt-4">
+            <div class="row">
+
+                <div class="col-12">
+                    <div
+                            class="slick_slider"
+                            id="home-slider"
+                            data-slick='{"slidesToShow": 1, "infinite": true, "dots": true, "autoplay": true}'
+                    >
+                        <?php foreach (range(23, 23) as $item): ?>
+                            <div class="item slick-slide">
+                                <img
+                                        srcset="newimg/<?= $item ?>-800x600.svg 320w, newimg/<?= $item ?>.svg 768w"
+                                        sizes="(max-width: 991px) 90px, 768px"
+                                        src="newimg/<?= $item ?>.svg"
+                                        class="d-block w-100"
+                                        alt="..."
+                                >
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="section pt-5 small_pb pb-5 overflow-hidden">
+                        <div class="custom-container">
+                            <div class="row">
+
+                                <div class="col-xl-12">
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <?php include 'components/top-brands.php'; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <div class=" custom-container pb-5">
+        <div class="row">
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="">  <img src="newimg/11.svg" alt=""></a>
+            </div>
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="">  <img src="newimg/12.svg" alt=""></a>
+            </div>
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="">  <img src="newimg/13.svg" alt=""></a>
+            </div>
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="">  <img src="newimg/14.svg" alt=""></a>
+            </div>
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="itemspage.html">  <img src="newimg/15.svg" alt=""></a>
+            </div>
+            <div class="col-lg-2 pt-5 col-sm-4 col-6">
+                <a href="">  <img src="newimg/16.svg" alt=""></a>
+            </div>
+        </div>
+       <div class="row ">
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/17.svg" alt=""></a>
+           </div>
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/18.svg" alt=""></a>
+           </div>
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/19.svg" alt=""></a>
+           </div>
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/20.svg" alt=""></a>
+           </div>
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/21.svg" alt=""></a>
+           </div>
+           <div class="col-lg-2 pt-5 col-sm-4 col-6">
+               <a href="">  <img src="newimg/22.svg" alt=""></a>
+           </div>
+       </div>
+
+
+    </div>
+
+
+    <div class="section pt-0 small_pb pb-5">
+        <div class="custom-container">
+            <div class="row">
+
+                <div class="col-xl-12">
+                    <div class="row">
+                        <div class="col-12 text-start">
+                            <h1 class="">Заголовок текстового SEO блока</h1>
+                        </div>
+
+                        <div x-data="{ expanded: false }">
+                            <div
+                                    class="col-12 text-start"
+                                    :class="{ 'collapsed-text': ! expanded }"
+                                    x-show="expanded"
+                                    x-collapse.min.80px
+                            >
+                                <h6 class="social-media">Есть много вариантов Lorem Ipsum, но большинство из них
+                                    имеет не
+                                    всегда приемлемые
+                                    модификации, например, юмористические вставки или слова, которые даже отдалённо
+                                    не
+                                    напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы
+                                    наверняка не
+                                    хотите какой-нибудь шутки, скрытой в середине абзаца.
+                                    <br>
+                                    <br>
+                                    Также все другие известные генераторы Lorem Ipsum используют один и тот же
+                                    текст,
+                                    который они просто повторяют, пока не достигнут нужный объём. Это делает
+                                    предлагаемый
+                                    здесь генератор единственным настоящим Lorem Ipsum генератором.
+                                    <br>
+                                    <br>
+                                    Он использует словарь из более чем 200 латинских слов, а также набор моделей
+                                    предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не
+                                    имеет
+                                    повторяющихся абзацей или </h6>
+                                <h6 class="social-media">
+                                    Есть много вариантов Lorem Ipsum, но большинство из них имеет не
+                                    всегда приемлемые
+                                    модификации, например, юмористические вставки или слова, которые даже отдалённо
+                                    не
+                                    напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы
+                                    наверняка не
+                                    хотите какой-нибудь шутки, скрытой в середине абзаца.
+                                    <br>
+                                    <br>
+                                    Также все другие известные генераторы Lorem Ipsum используют один и тот же
+                                    текст,
+                                    который они просто повторяют, пока не достигнут нужный объём. Это делает
+                                    предлагаемый
+                                    здесь генератор единственным настоящим Lorem Ipsum генератором.
+                                    <br>
+                                    <br>
+                                    Он использует словарь из более чем 200 латинских слов, а также набор моделей
+                                    предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не
+                                    имеет
+                                    повторяющихся абзацей или </h6>
+                            </div>
+
+                            <div class="col-12 text-center mt-2">
+                                <button class="btn btn-sm btn-primary" @click="expanded = ! expanded">Додатково</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-white">
+    <div class="bottom_footer border-top-tran grey-bg  ">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <div class="align-items-center text-center justify-content-center f12">
+                        (c) 2023. ООО “Rozetka”
+                    </div>
+
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="align-items-center text-center justify-content-center f12 sub-menu-linkswhite">
+                        <a style="text-decoration:underline" href="/newtemplate/page_info.php">Політика конфіденційності</a>
+                    </div>
+                </div>
+                <div class="col-lg-4   sub-menu-linkswhiteicon">
+                    <ul class="social_icons text-center ">
+                        <div>
+                            <li><a href="#" class=""><i class="bi bi-telegram"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-whatsapp"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-youtube"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <div class="title2" id="exampleModalCenterTitle">Кошик</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+
+                        <div class="cart-product flex-lg-nowrap">
+                            <div class="d-flex flex-grow-1 align-items-center">
+                                <a href="/newtemplate/product.php" class="d-block p-2 flex-shrink-0">
+                                    <img class="img-fluid" src="/assets/newimg/smcat.svg" alt="">
+                                </a>
+                                <a href="/newtemplate/product.php" class="p-2">
+                                    Товар название и активная ссылка открыть карточку товара
+                                </a>
+                                <div class="d-lg-none p-2">
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">4349.00</div>
+                            <div
+                                    class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
+                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">
+                                    <span class="input-group-text">-</span>
+                                    <input type="text" class="form-control" value="1">
+                                    <span class="input-group-text">+</span>
+                                </div>
+                                <div class="p-2">13047.00</div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 col-lg-4">
+                            <div class="text-start tb">
+                                <label for="">Промокод</label>
+                                <input type="email" class="form-control"
+                                       id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-8">
+                            <div class="text-end tb">
+                                <div> Сумма: 91414.00</div>
+                                <div> Скидка: 1000.00</div>
+                                <div> Разом: 81414.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 text-end mt-2">
+                        <button class="btn btn-primary w-100" type="button">
+                            Оформити замовлення
+                        </button>
+                    </div>
+                    <div class="col-12 col-lg-6 order-lg-first sub-menu-links text-center mt-2">
+                        <a href="">Продолжить покупки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+
+<!-- Latest jQuery -->
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- popper min js -->
+<script src="assets/js/popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- magnific-popup min js  -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- waypoints min js  -->
+<script src="assets/js/waypoints.min.js"></script>
+<!-- parallax js  -->
+<script src="assets/js/parallax.js"></script>
+<!-- countdown js  -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- imagesloaded js -->
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js -->
+<script src="assets/js/isotope.min.js"></script>
+<!-- jquery.dd.min js -->
+<script src="assets/js/jquery.dd.min.js"></script>
+<!-- slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- scripts js -->
+<script src="assets/js/scripts.js"></script>
+
+
+</body>
+</html>
