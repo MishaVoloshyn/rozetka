@@ -9806,5 +9806,34 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
+.txt{
+  font-size: 14px;
+}
+.text-yellow{
+  color: yellow;
+  font-size: 14px;
+}
+.gray{
+  color: #D4D4D4;
+  font-size: 14px;
+}
+.orange{
+  color: #FFA900;
+  font-size: 16px;
+}
+.text-red{
+  color: #FF0000;
+}
+.yellow{
+  background-color: #FFA900;
+}
+.red{
+  background-color: #FF0000;
+}
+.text-gray{
+  color: #595757;
+}
+
+
 
 
