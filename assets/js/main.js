@@ -351,8 +351,21 @@ let total = document.querySelector('#total');
 
 
 let listCards = [];
-let promo = ["Rozetka2024", "mm227", "ASUSF17"];
-let promoCode = document.querySelector("#promoCode");
+let promoCode = [
+    {
+        code: "Rozetka2024",
+        discount: 200
+    },
+    {
+        code: "mm227",
+        discount: 300
+    },
+    {
+        code: "ASUSF17",
+        discount: 400
+    }
+];
+
 
 let template = document.querySelector('#template').innerHTML;
 let output = document.querySelector("#output");
@@ -362,13 +375,17 @@ CheckCounter();
 for (let i = 0; i < products.length; i++)
 {
     products[i].name  = products[i].full_name.slice(0, 60);
+    // let pr = numberWithSpaces(products[i].price);
+    // products[i].price = pr;
     const productData = products[i];
     let html = Mustache.render(template, productData);
     output.insertAdjacentHTML("beforeend", html);
 }
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 let addButton = document.getElementsByClassName("cartBut");
-
 const buttons = document.getElementsByTagName("button");
 const result = document.getElementById("result");
 
@@ -393,7 +410,57 @@ function CheckCounter()
         counter1.textContent = listCards.length;
         counter1.textContent = listCards.length;
         sum.textContent = CountPrice();
+        total.textContent = sum.textContent;
+
     }
+}
+
+
+// Функция для проверки промокода
+let counterPromo = 0;
+function checkPromoCode(code) {
+    // Проверить, есть ли промокод в массиве
+    for (let i = 0; i < promoCode.length; i++) {
+        if (promoCode[i].code === code) {
+            counterPromo = i;
+            return true;
+        }
+    }
+    return false;
+}
+
+// Обработка события input-элемента promoCode
+document.getElementById("promoCode").addEventListener("change", (e) => {
+    // Получить значение промокода из input-элемента
+    let promo = e.target.value;
+
+    // Проверить промокод
+    let isPromoCodeValid = checkPromoCode(promo);
+
+    // Показать сообщение о результате проверки
+    if (isPromoCodeValid) {
+        document.getElementById("promoCodeStatus").innerHTML = "Промокод действителен";
+        sale.textContent = promoCode[counterPromo].discount;
+        total.textContent = sum.textContent - sale.textContent;
+    } else {
+        document.getElementById("promoCodeStatus").innerHTML = "Промокод недействителен";
+        total.textContent = sum.textContent
+    }
+    if(promo === '')
+    {
+        document.getElementById("promoCodeStatus").innerHTML = "";
+        total.textContent = sum.textContent;
+    }
+});
+
+
+function TotalPrice()
+{
+    alert("We are here!");
+
+    let total = sum - promoCode[counterPromo].discount;
+    console.log(total);
+    return total;
 }
 
 
@@ -420,6 +487,36 @@ function addToCart(id)
     listCard.insertAdjacentHTML("beforeend", html);
     CheckCounter();
 }
+let closeBtn = document.getElementsByClassName("closeBtn1");
+console.log(closeBtn);
+const buttonClose = e => {
+    alert("function");
+    // let btnId = e.target.id;
+    // console.log(btnId);
+    // listCards.splice(btnId, 1);
+    // renderCart();
+
+}
+for (let button of closeBtn) {
+    console.log("click!");
+    //button.addEventListener("click", buttonClose);
+}
+function renderCart()
+{
+
+        for(let i = 0; i < listCards.length; i++)
+        {
+            const productInCart = products[i];
+            //listCards.push(productInCart);
+            console.log(listCards);
+            let html = Mustache.render(templateCard, productInCart);
+            listCard.insertAdjacentHTML("beforeend", html);
+            CheckCounter();
+        }
+
+}
+
+
 
 
 

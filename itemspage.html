@@ -53,6 +53,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -454,7 +455,7 @@
                                     </div>
                                     <div class="card text-center" >
                                         <div class="card-body">
-                                            <a href="product.html"><p class="card-text txt text-start mb-0"><span class="text-uppercase">{{name}}</span></p></a>
+                                            <a href="iproduct.html"><p class="card-text txt text-start mb-0"><span class="text-uppercase">{{name}}</span></p></a>
                                             <div class="text-start gray" >
                                                 <i class="bi bi-star-fill"></i>
                                                 <i class="bi bi-star-fill"></i>
@@ -640,7 +641,7 @@
                                 <div class="p-2">totalPrice</div>
                             </div>
                             <div class="d-none d-lg-block p-2">
-                                <button type="button" class="btn-close" aria-label="Close"></button>
+                                <button id="close-{{id}}" type="button" class="btn-close closeBtn1" aria-label="Close"></button>
                             </div>
                         </div>
                     </template>
@@ -656,6 +657,7 @@
                                 <input type="email" class="form-control"
                                        id="promoCode">
                             </div>
+                            <div id="promoCodeStatus"></div>
                         </div>
                         <div class="col-6 col-lg-8">
                             <div class="text-end tb">

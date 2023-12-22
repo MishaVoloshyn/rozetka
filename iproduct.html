@@ -69,7 +69,6 @@
 
 <!-- START HEADER -->
 
-<!--    Main panel-->
 <header class="header_wrap sticky">
     <div class="custom-container">
         <!--        Desktop menu-->
@@ -133,19 +132,17 @@
                         <!--                        <div class="d-none d-xl-block">-->
                         <!--                            <li>-->
                         <!--                                <a href="#" class="nav-link py-1">-->
-                        <!--                                    --><?php //include 'components/svg/heart.php'; ?>
-                        <!--<span-->
+                        <!--                                    --><?php //include 'components/svg/heart.php'; ?><!--<span-->
                         <!--                                        class="wishlist_count">0</span>-->
                         <!--                                </a>-->
                         <!--                            </li>-->
                         <!--                        </div>-->
                         <div class="">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php"
-                                   data-bs-toggle="modal"
+                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <?php include 'components/svg/basket.php'; ?><span
-                                        class="cart_count">2</span>
+                                    <i class="bi bi-cart text-white"></i>
+                                    <span id="cart_count1" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -181,11 +178,9 @@
                     <div class="row p-0">
                         <div class="col-12 p-0">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php"
-                                   data-bs-toggle="modal"
+                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <?php include 'components/svg/basket.php'; ?>
-                                    <span class="cart_count">2</span>
+                                    <span id="cart_count2" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -387,68 +382,22 @@
                                     <div class="row ">
                                         <div class="col-lg-7 col-12">
                                             <div class="title2 text-start">
-                                                Опис:
+                                                Описание:
                                             </div>
                                             <div class="text-start pt-1 base-text1">
-                                                Багато хто думає, що Lorem Ipsum - взятий зі стелі псевдо-латинський
-                                                набір
-                                                слів, але це не зовсім так.
-                                                Його коріння сягає одного фрагмента класичної латині 45 року н.е., тобто
-                                                більше двох тисячоліть тому.
-                                                Річард МакКлінток, професор латини з коледжу Hampden-Sydney, штат
-                                                Вірджинія,
-                                                взяв одне з найдивніших
-                                                слів у Lorem Ipsum, "consectetur", і зайнявся його пошуками у класичній
-                                                латинській літературі. В
-                                                результаті він знайшов незаперечне першоджерело Lorem Ipsum
-                                                <br>
-                                                Опис Зарядна станція EB70 BLUETTI PowerOak | Портативна електростанція
-                                                УМБ
-                                                Portable Power Station 1000
-                                                Вт 716 Вт*год.<br>
-                                                Бренд: Bluetti<br>
-                                                Тип: Зарядна станція<br>
-                                                Зарядні пристрої: смартфони, планшети, ноутбуки та інші<br>
-                                                Підключення пристроїв: USBx2 + USB Type-Cx2<br>
-                                                Ємність: 716Wh/1000W<br>
-                                                Потужність, Вт: 1000<br>
-                                                Напруга, В: 5/9/12/15/20/221<br>
+                                                <b>Диагональ дисплея:</b><span class="text-blue">{{diagonal}}</span><br>
+                                                <b>Максимальное разрешение дисплея:</b><span class="text-blue">{{max_res}}</span><br>
+                                                <b>Время реакции матрицы:</b><span class="text-blue">{{matrix}}</span><br>
+                                                <b>Яркость дисплея:</b><span class="text-blue">{{brightness}}</span><br>
+                                                <b>Тип матрицы:</b><span class="text-blue">{{mtype}}</span><br>
+                                                <b>Контрастность дисплея:</b><span class="text-blue">{{contrast}}</span><br>
+                                                <b>Особенности::</b><span class="text-blue">{{peculiarities}}</span><br>
                                                 <div class="pt-2">
-                                                    <a href="#">Докладніше про товар</a>
+                                                    <a href="#" class="fw-bold text-blue">Подробнее о товаре</a>
                                                 </div>
 
                                             </div>
-                                            <div class="col-12">
-                                                <div class="text-start title2 pt-4 pb-3">
-                                                    Характеристики:
-                                                </div>
-                                                <div class="col-12 col-md-8 col-lg-5 d-flex justify-content-start">
-                                                    <table class="table table-striped">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td>Клас корму</td>
-                                                            <td>Супер преміум</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Акції</td>
-                                                            <td>Акційний товар</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Порода кота/кішки</td>
-                                                            <td>Усі породи</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Вік кота/кішки</td>
-                                                            <td>Дорослі</td>
-                                                        </tr>
-                                                        </tbody>
 
-                                                    </table>
-                                                </div>
-                                                <div class="mt-1 mb-4">
-                                                    <a href="#">Дивитися всі характеристики</a>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="col-lg-5 col-12">
                                             <div class="title2">
@@ -778,48 +727,52 @@
                 <div class="modal-body">
                     <div class="mb-3">
 
-                        <div class="cart-product flex-lg-nowrap">
-                            <div class="d-flex flex-grow-1 align-items-center">
-                                <a href="/newtemplate/product.php" class="d-block p-2 flex-shrink-0">
-                                    <img class="img-fluid" src="/assets/newimg/smcat.svg" alt="">
-                                </a>
-                                <a href="/newtemplate/product.php" class="p-2">
-                                    Товар название и активная ссылка открыть карточку товара
-                                </a>
-                                <div class="d-lg-none p-2">
-                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                        <template id="templateCard">
+                            <div class="cart-product flex-lg-nowrap">
+                                <div class="d-flex flex-grow-1 align-items-center">
+                                    <a href="" class="d-block p-2 flex-shrink-0">
+                                        <img class="img-fluid" src="/assets/img/{{image}}" alt="" style="height: 30px">
+                                    </a>
+                                    <a href="" class="p-2">
+                                        {{name}}
+                                    </a>
+                                    <div class="d-lg-none p-2">
+                                        <button type="button" class="btn-close" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="d-none d-lg-block p-2">{{price}}</div>
+                                <div class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
+                                    <div style="max-width: 115px" class="input-group flex-nowrap p-2">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" class="form-control" value="1">
+                                        <span class="input-group-text">+</span>
+                                    </div>
+                                    <div class="p-2">totalPrice</div>
+                                </div>
+                                <div class="d-none d-lg-block p-2">
+                                    <button id="close-{{id}}" type="button" class="btn-close closeBtn1" aria-label="Close"></button>
                                 </div>
                             </div>
-                            <div class="d-none d-lg-block p-2">4349.00</div>
-                            <div
-                                    class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
-                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">
-                                    <span class="input-group-text">-</span>
-                                    <input type="text" class="form-control" value="1">
-                                    <span class="input-group-text">+</span>
-                                </div>
-                                <div class="p-2">13047.00</div>
-                            </div>
-                            <div class="d-none d-lg-block p-2">
-                                <button type="button" class="btn-close" aria-label="Close"></button>
-                            </div>
-                        </div>
+                        </template>
+
+                        <div id="listCard"></div>
 
                     </div>
                     <div class="col-12">
                         <div class="row">
                             <div class="col-6 col-lg-4">
                                 <div class="text-start tb">
-                                    <label>Промокод</label>
+                                    <label for="">Промокод</label>
                                     <input type="email" class="form-control"
-                                           id="exampleFormControlInput1">
+                                           id="promoCode">
                                 </div>
+                                <div id="promoCodeStatus"></div>
                             </div>
                             <div class="col-6 col-lg-8">
                                 <div class="text-end tb">
-                                    <div> Сумма: 91414.00</div>
-                                    <div> Скидка: 1000.00</div>
-                                    <div> Разом: 81414.00</div>
+                                    <div> Сумма: <span id="sum"></span>₴</div>
+                                    <div> Скидка: <span id="sale"></span>₴</div>
+                                    <div> Разом: <span id="total"></span>₴</div>
                                 </div>
                             </div>
                         </div>
@@ -838,7 +791,6 @@
             </div>
         </div>
     </div>
-</div>
 
 <script>
 
@@ -897,5 +849,7 @@
 <script src="../assets/js/isotope-loadmore.js"></script>
 <!-- scripts js -->
 <script src="../assets/js/scripts.js"></script>
+<script src="assets/js/mustache.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
