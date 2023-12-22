@@ -142,8 +142,8 @@
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <?php include 'components/svg/basket.php'; ?><span
-                                            class="cart_count">2</span>
+                                    <i class="bi bi-cart text-white"></i>
+                                    <span id="cart_count1" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -181,8 +181,7 @@
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <?php include 'components/svg/basket.php'; ?>
-                                    <span class="cart_count">2</span>
+                                    <span id="cart_count2" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -261,10 +260,10 @@
                         </div>
 
 
-                        <div class="accordion accordion-flush brbottom  pt-3" id="accordionFlushExample">
+                        <div class="accordion accordion-flush brbottom  pt-3" id="accordionFlushExample2">
                             <div class="accordion-item">
                                 <hr>
-                                <div class="accordion-header  pb-2" id="flush-headingOne">
+                                <div class="accordion-header  pb-2" id="flush-headingOne1">
                                     <button class=" p-0 bg-body border-0" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#flush-collapseOne" aria-expanded="true"
                                             aria-controls="flush-collapseOne">
@@ -272,21 +271,19 @@
                                     </button>
                                 </div>
 
-                                <div id="flush-collapseOne" class="accordion-collapse collapse show "
+                                <div id="flush-collapseOne2" class="accordion-collapse collapse show "
                                      aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                     <ul class="list_brand sub-menu-links">
                                         <li>
                                             <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals1" value="">
-                                                <label class="form-check-label" for="Arrivals1">
-                                                    <span>AOC</span></label>
+                                                <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" checked>
+                                                <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="custome-checkbox base-text">
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals2" value="">
+                                                       id="Arrivals2" value="ASUS">
                                                 <label class="form-check-label" for="Arrivals2">
                                                     <span>ASUS</span></label>
                                             </div>
@@ -435,8 +432,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
-
+                    <div class="col-12" >
                         <template id="template">
                             <div class="col-6 col-lg-3">
                                 <div class="card mt-2 mb-2">
@@ -459,7 +455,7 @@
                                     <div class="card text-center" >
                                         <div class="card-body">
                                             <a href="product.html"><p class="card-text txt text-start mb-0"><span class="text-uppercase">{{name}}</span></p></a>
-                                            <div class="text-start gray" id="stars">
+                                            <div class="text-start gray" >
                                                 <i class="bi bi-star-fill"></i>
                                                 <i class="bi bi-star-fill"></i>
                                                 <i class="bi bi-star-fill"></i>
@@ -472,10 +468,10 @@
                                                         <p class="text-decoration-line-through text-gray mb-0" style="font-size: 12px;">{{prev_price}}₴</p>
                                                     </div>
                                                     <div class="col-6 text-start align-middle">
-                                                        <p class="text-red fw-bold " style="font-size: 18px">{{price}}₴</p>
+                                                        <p class="text-red fw-bold" style="font-size: 18px">{{price}}₴</p>
                                                     </div>
                                                     <div class="col-6 text-end text-success align-middle">
-                                                        <i class="bi bi-cart" style="font-size: 20px"></i>
+                                                       <i class="bi bi-cart btn cartBut"  id="{{id}}"  style="font-size: 20px"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -484,11 +480,12 @@
                                 </div>
                             </div>
                         </template>
-                        <div class="container mt-3">
+                        <div class="container mt-3 ">
                             <div class="row" id="output">
 
                             </div>
                         </div>
+                        <div id="result"></div>
                     </div>
                 </div>
 
@@ -519,7 +516,7 @@
                                 <h6 class="social-media">Мониторы являются одним из основных элементов компьютера. <br>Дисплей отвечает за удобство во время использования ПК, поэтому важно уделить его выбору особое внимание.
                                     <br>
 
-                                    <br><br><h3>Сколько стоит монитор для компьютера?</h3>
+                                    <br><h3>Сколько стоит монитор для компьютера?</h3>
                                     Самый дешевый монитор в каталоге стоит 2499 гривен, оптимальные по соотношению цены и качества мониторы Samsung, LG, Philips можно купить в пределах от 3385 до 8 499 в зависимости от диагонали экрана.<br>
 
                                     <br><br><h3>Как выбрать монитор?</h3>
@@ -559,7 +556,7 @@
                             </div>
 
                             <div class="col-12 text-center mt-2">
-                                <button class="btn btn-sm btn-primary" @click="expanded = ! expanded">Додатково
+                                <button class="btn btn-sm btn-primary" @click="expanded = ! expanded" id="h">Додатково
                                 </button>
                             </div>
                         </div>
@@ -620,32 +617,35 @@
             <div class="modal-body">
                 <div class="mb-3">
 
-                    <div class="cart-product flex-lg-nowrap">
-                        <div class="d-flex flex-grow-1 align-items-center">
-                            <a href="/newtemplate/product.php" class="d-block p-2 flex-shrink-0">
-                                <img class="img-fluid" src="/assets/newimg/smcat.svg" alt="">
-                            </a>
-                            <a href="/newtemplate/product.php" class="p-2">
-                                Товар название и активная ссылка открыть карточку товара
-                            </a>
-                            <div class="d-lg-none p-2">
+                    <template id="templateCard">
+                        <div class="cart-product flex-lg-nowrap">
+                            <div class="d-flex flex-grow-1 align-items-center">
+                                <a href="" class="d-block p-2 flex-shrink-0">
+                                    <img class="img-fluid" src="/assets/img/{{image}}" alt="" style="height: 30px">
+                                </a>
+                                <a href="" class="p-2">
+                                    {{name}}
+                                </a>
+                                <div class="d-lg-none p-2">
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">{{price}}</div>
+                            <div class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
+                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">
+                                    <span class="input-group-text">-</span>
+                                    <input type="text" class="form-control" value="1">
+                                    <span class="input-group-text">+</span>
+                                </div>
+                                <div class="p-2">totalPrice</div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">
                                 <button type="button" class="btn-close" aria-label="Close"></button>
                             </div>
                         </div>
-                        <div class="d-none d-lg-block p-2">4349.00</div>
-                        <div
-                                class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
-                            <div style="max-width: 115px" class="input-group flex-nowrap p-2">
-                                <span class="input-group-text">-</span>
-                                <input type="text" class="form-control" value="1">
-                                <span class="input-group-text">+</span>
-                            </div>
-                            <div class="p-2">13047.00</div>
-                        </div>
-                        <div class="d-none d-lg-block p-2">
-                            <button type="button" class="btn-close" aria-label="Close"></button>
-                        </div>
-                    </div>
+                    </template>
+
+                    <div id="listCard"></div>
 
                 </div>
                 <div class="col-12">
@@ -654,14 +654,14 @@
                             <div class="text-start tb">
                                 <label for="">Промокод</label>
                                 <input type="email" class="form-control"
-                                       id="exampleFormControlInput2">
+                                       id="promoCode">
                             </div>
                         </div>
                         <div class="col-6 col-lg-8">
                             <div class="text-end tb">
-                                <div> Сумма: 91414.00</div>
-                                <div> Скидка: 1000.00</div>
-                                <div> Разом: 81414.00</div>
+                                <div> Сумма: <span id="sum"></span>₴</div>
+                                <div> Скидка: <span id="sale"></span>₴</div>
+                                <div> Разом: <span id="total"></span>₴</div>
                             </div>
                         </div>
                     </div>

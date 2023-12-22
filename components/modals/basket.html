@@ -1,5 +1,4 @@
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
-     style="display: none;" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header border-0 pb-0">
@@ -8,34 +7,34 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3">
-                    <?php foreach (range(1, 4) as $i): ?>
+                    <template>
                         <div class="cart-product flex-lg-nowrap">
                             <div class="d-flex flex-grow-1 align-items-center">
-                                <a href="/newtemplate/product.php" class="d-block p-2 flex-shrink-0">
-                                    <img class="img-fluid" src="/assets/newimg/smcat.svg" alt="">
+                                <a href="" class="d-block p-2 flex-shrink-0">
+                                    <img class="img-fluid" src="/assets/img/{{img}}" alt="">
                                 </a>
-                                <a href="/newtemplate/product.php" class="p-2">
-                                    Товар название и активная ссылка открыть карточку товара
+                                <a href="" class="p-2">
+                                    {{name}}
                                 </a>
                                 <div class="d-lg-none p-2">
                                     <button type="button" class="btn-close" aria-label="Close"></button>
                                 </div>
                             </div>
-                            <div class="d-none d-lg-block p-2">4349.00</div>
-                            <div
-                                class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
+                            <div class="d-none d-lg-block p-2">{{price}}</div>
+                            <div class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
                                 <div style="max-width: 115px" class="input-group flex-nowrap p-2">
                                     <span class="input-group-text">-</span>
                                     <input type="text" class="form-control" value="1">
                                     <span class="input-group-text">+</span>
                                 </div>
-                                <div class="p-2">13047.00</div>
+                                <div class="p-2">totalPrice</div>
                             </div>
                             <div class="d-none d-lg-block p-2">
                                 <button type="button" class="btn-close" aria-label="Close"></button>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    </template>
+
                 </div>
                 <div class="col-12">
                     <div class="row">
