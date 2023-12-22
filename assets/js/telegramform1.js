@@ -5,7 +5,7 @@
         // Сообщения формы
         let successSendText = "Сообщение успешно отправлено";
         let errorSendText = "Сообщение не отправлено. Попробуйте еще раз!";
-        let requiredFieldsText = "Заполните поля с именем и телефоном";
+        let requiredFieldsText = "Заполните поля Переваги та Недоліки";
 
         // Сохраняем в переменную класс с параграфом для вывода сообщений об отправке
         let message = $(this).find(".contact-form__message");
