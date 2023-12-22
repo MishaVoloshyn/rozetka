@@ -19,12 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $textSendStatus = '';
     $msgs = [];
 
+
     // Проверяем не пусты ли поля с именем и телефоном
     if (!empty($_POST['name']) && !empty($_POST['trouble'])) {
 
         // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
         $txt = "";
-
+        if (isset($_POST['theme']) && !empty($_POST['theme'])) {
+            $txt .= "Тема: " . strip_tags(urlencode($_POST['theme'])) . "%0A";
+        }
         // Имя
         if (isset($_POST['name']) && !empty($_POST['name'])) {
             $txt .= "Переваги: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
@@ -39,17 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $txt .= "Коментар: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
         }
 
-        // Не забываем про тему сообщения
-        if (isset($_POST['theme']) && !empty($_POST['theme'])) {
-            $txt .= "Тема: " . strip_tags(urlencode($_POST['theme']));
-        }
 
-        $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt);
 
-        if( isset(json_decode($textSendStatus)->{'ok'}) && json_decode($textSendStatus)->{'ok'} ) {
+
+
+
+        $textSendStatus = @file_get_contents('https://api.telegram.org/bot' . TOKEN . '/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt);
+
+        if (isset(json_decode($textSendStatus)->{'ok'}) && json_decode($textSendStatus)->{'ok'}) {
             if (!empty($_FILES['files']['tmp_name'])) {
 
-                $urlFile =  "https://api.telegram.org/bot" . TOKEN . "/sendMediaGroup";
+                $urlFile = "https://api.telegram.org/bot" . TOKEN . "/sendMediaGroup";
 
                 // Путь загрузки файлов
                 $path = $_SERVER['DOCUMENT_ROOT'] . '/telegramform/tmp/';
@@ -65,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if ($_FILES['files']['size'][$ct] < $size && in_array($_FILES['files']['type'][$ct], $types)) {
                             $filePath = $path . $_FILES['files']['name'][$ct];
                             $postContent[$_FILES['files']['name'][$ct]] = new CURLFile(realpath($filePath));
-                            $mediaData[] = ['type' => 'document', 'media' => 'attach://'. $_FILES['files']['name'][$ct]];
+                            $mediaData[] = ['type' => 'document', 'media' => 'attach://' . $_FILES['files']['name'][$ct]];
                         }
                     }
                 }
@@ -79,21 +82,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 curl_setopt($curl, CURLOPT_POSTFIELDS, $postContent);
                 $fileSendStatus = curl_exec($curl);
                 curl_close($curl);
-                $files = glob($path.'*');
-                foreach($files as $file){
-                    if(is_file($file))
+                $files = glob($path . '*');
+                foreach ($files as $file) {
+                    if (is_file($file))
                         unlink($file);
                 }
             }
             echo json_encode('SUCCESS');
-        } else {
+        }
+        if (isset($_POST['theme1']) && !empty($_POST['theme1'])) {
+            $txt .= "Тема: " . strip_tags(urlencode($_POST['theme1'])) . "%0A";
+        }
+        else {
             echo json_encode('ERROR');
             //
             // echo json_decode($textSendStatus);
         }
+
     } else {
         echo json_encode('NOTVALID');
     }
 } else {
     header("Location: /");
 }
+
+
+
+
