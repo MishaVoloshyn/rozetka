@@ -25,8 +25,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
         $txt = "";
+        if (isset($_POST['theme1']) && !empty($_POST['theme1'])) {
+            $txt .= "" . strip_tags(urlencode($_POST['theme1'])) . "%0A";
+        }
+
+
         if (isset($_POST['theme']) && !empty($_POST['theme'])) {
             $txt .= "Тема: " . strip_tags(urlencode($_POST['theme'])) . "%0A";
+        }
+        if (!empty($_POST['starCount'])) {
+            // Get the star count
+            $starCount = $_POST['starCount'];
+
+            // Update the message text
+            $txt .= "Оцінка: " . $starCount . " ☆%0A";
+
+            // ...
         }
         // Имя
         if (isset($_POST['name']) && !empty($_POST['name'])) {
@@ -41,7 +55,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['comment']) && !empty($_POST['comment'])) {
             $txt .= "Коментар: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
         }
-
+        if (isset($_POST['comment']) && !empty($_POST['comment'])) {
+            $txt .= "Коментар: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
+        }
+        if (isset($_POST['phone']) && !empty($_POST['phone'])) {
+            $txt .= "Phone: " . strip_tags(urlencode($_POST['phone'])) . "%0A";
+        }
+        if (isset($_POST['theme1']) && !empty($_POST['theme1'])) {
+            $txt .= "" . strip_tags(urlencode($_POST['theme1'])) . "%0A";
+        }
 
 
 
@@ -90,9 +112,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             echo json_encode('SUCCESS');
         }
-        if (isset($_POST['theme1']) && !empty($_POST['theme1'])) {
-            $txt .= "Тема: " . strip_tags(urlencode($_POST['theme1'])) . "%0A";
-        }
+
+
         else {
             echo json_encode('ERROR');
             //

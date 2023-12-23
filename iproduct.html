@@ -408,98 +408,137 @@
                                                     <div class="bg-white">
 
 
-                                                        <!--                                                        <div class="form-wrapper">-->
-                                                        <!--                                                            <form id="form-contact" method="POST" class="contact-form"-->
-                                                        <!--                                                                  autocomplete="off" enctype="multipart/form-data">-->
+                                                        <div class="form-wrapper">
+                                                            <form id="form-contact" method="POST"
+                                                                  class="contact-form"
+                                                                  autocomplete="off"
+                                                                  enctype="multipart/form-data">
 
-                                                        <!--                                                                <div class="preloader"></div>-->
-                                                        <!--                                                                <p class="contact-form__message"></p>-->
-                                                        <!--                                                                <div class="form-group mb-3">-->
-                                                        <!--                                                                    <label class="">-->
-                                                        <!--                                                                        Переваги-->
-                                                        <!--                                                                    </label>-->
-                                                        <!--                                                                    &lt;!&ndash; Поле с Переваги &ndash;&gt;-->
-                                                        <!--                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_name">-->
-                                                        <!--                                                                        <input name="name" type="text"-->
-                                                        <!--                                                                               class="contact-form__input form-control contact-form__input_name"-->
-                                                        <!--                                                                               placeholder="Переваги">-->
-                                                        <!--                                                                    </div>-->
-                                                        <!--                                                                </div>-->
+                                                                <div class="preloader"></div>
+                                                                <p class="contact-form__message"></p>
 
-                                                        <!--                                                                <div class="form-group mb-3">-->
-                                                        <!--                                                                    <label class="">-->
-                                                        <!--                                                                        Недоліки-->
-                                                        <!--                                                                    </label>-->
-                                                        <!--                                                                    &lt;!&ndash; Поле с Недоліки &ndash;&gt;-->
-                                                        <!--                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">-->
-                                                        <!--                                                                        <input name="trouble" type="text"-->
-                                                        <!--                                                                               class="contact-form__input form-control contact-form__input_trouble"-->
-                                                        <!--                                                                               placeholder="Недоліки">-->
-                                                        <!--                                                                    </div>-->
-                                                        <!--                                                                </div>-->
-                                                        <!--                                                                <div class="form-group mb-3">-->
-                                                        <!--                                                                    <label class="">-->
-                                                        <!--                                                                        Коментар-->
-                                                        <!--                                                                    </label>-->
-                                                        <!--                                                                    &lt;!&ndash; Поле с Коментар &ndash;&gt;-->
-                                                        <!--                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">-->
-                                                        <!--                                                                        <input name="comment" type="text"-->
-                                                        <!--                                                                               class="contact-form__input form-control contact-form__input_comment"-->
-                                                        <!--                                                                               placeholder="Недоліки">-->
-                                                        <!--                                                                    </div>-->
-                                                        <!--                                                                </div>-->
-                                                        <!--                                                                <div>-->
+<!--                                                                <div class="stars-wrapper">-->
+<!--                                                                    <span class="star star-1" onclick="countStars(1)">☆</span>-->
+<!--                                                                    <span class="star star-2" onclick="countStars(2)">☆</span>-->
+<!--                                                                    <span class="star star-3" onclick="countStars(3)">☆</span>-->
+<!--                                                                    <span class="star star-4" onclick="countStars(4)">☆</span>-->
+<!--                                                                    <span class="star star-5" onclick="countStars(5)">☆</span>-->
+<!--                                                                </div>-->
+<!--                                                                <input type="hidden" id="starCount" name="starCount" value="">-->
+                                                                <div class="form-group mb-3">
+                                                                    <label class="">
+                                                                        Оцінка(1-5☆)
+                                                                    </label>
+                                                                    <!-- Поле с Переваги -->
+                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_starCount">
+                                                                        <input name="starCount" type="text"
+                                                                               class="contact-form__input form-control contact-form__input_starCount"
+                                                                               placeholder="Оцените товар от 1-5">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label class="">
+                                                                        Переваги
+                                                                    </label>
+                                                                    <!-- Поле с Переваги -->
+                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                                                                        <input name="name" type="text"
+                                                                               class="contact-form__input form-control contact-form__input_name"
+                                                                               placeholder="Переваги">
+                                                                    </div>
+                                                                </div>
 
-                                                        <!--                                                                </div>-->
-                                                        <!--                                                                <div class="contact-form__input-wrapper">-->
-                                                        <!--                                                                    <input type="file" name="files[]"-->
-                                                        <!--                                                                           id="contact-form__input_file"-->
-                                                        <!--                                                                           class="contact-form__input contact-form__input_file"-->
-                                                        <!--                                                                           multiple>-->
-                                                        <!--                                                                    <label for="contact-form__input_file"-->
-                                                        <!--                                                                           class="contact-form__file-button">-->
-                                                        <!--                                                                        <span class="contact-form__file-text">Выберите файл</span>-->
-                                                        <!--                                                                    </label>-->
-                                                        <!--                                                                </div>-->
+                                                                <div class="form-group mb-3">
+                                                                    <label class="">
+                                                                        Недоліки
+                                                                    </label>
+                                                                    <!-- Поле с Недоліки -->
+                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
+                                                                        <input name="trouble" type="text"
+                                                                               class="contact-form__input form-control contact-form__input_trouble"
+                                                                               placeholder="Недоліки">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label class="">
+                                                                        Коментар
+                                                                    </label>
+                                                                    <!-- Поле с Коментар -->
+                                                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
+                                                                        <input name="comment" type="text"
+                                                                               class="contact-form__input form-control contact-form__input_comment"
+                                                                               placeholder="Недоліки">
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-3">
+                                                                        <label class="">
+                                                                            Телефон
+                                                                        </label>
+                                                                        <!-- Поле с Коментар -->
+                                                                        <!-- Поле с Коментар -->
+                                                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+                                                                            <input name="phone" type="text"
+                                                                                   class="contact-form__input form-control contact-form__input_phone"
+                                                                                   placeholder="Телефон">
+                                                                        </div>
+                                                                    </div>
 
 
-                                                        <!--                                                                &lt;!&ndash;Поле с темой в письме&ndash;&gt;-->
-                                                        <!--                                                                <input name="theme" type="hidden"-->
-                                                        <!--                                                                       class="contact-form__input form-control contact-form__input_theme"-->
-                                                        <!--                                                                       value="Оценочкая форма с карточки товара">-->
+                                                                </div>
+                                                                <div class="contact-form__input-wrapper">
+                                                                    <input type="file" name="files[]"
+                                                                           id="contact-form__input_file"
+                                                                           class="contact-form__input contact-form__input_file"
+                                                                           multiple>
+                                                                    <label for="contact-form__input_file"
+                                                                           class="contact-form__file-button">
+                                                                        <span class="contact-form__file-text">Выберите файл</span>
+                                                                    </label>
+                                                                </div>
 
-                                                        <!--                                                                &lt;!&ndash;Кнопка отправки формы&ndash;&gt;-->
-                                                        <!--                                                                <button type="submit"-->
-                                                        <!--                                                                        class="contact-form__button btn btn-lg btn-primary w-100">-->
-                                                        <!--                                                                    Отправить-->
-                                                        <!--                                                                </button>-->
 
-                                                        <!--                                                            </form>-->
+                                                                <!--Поле с темой в письме-->
+                                                                <input name="theme" type="hidden"
+                                                                       class="contact-form__input form-control contact-form__input_theme"
+                                                                       value="Оценочкая форма с карточки товара">
+                                                                <input name="theme1" type="hidden"
+                                                                       class="contact-form__input form-control contact-form__input_theme1"
+                                                                       value="---------------------------">
+
+                                                                <!--Кнопка отправки формы-->
+                                                                <div class="pt-3">
+                                                                    <button type="submit"
+                                                                            class="contact-form__button btn btn-lg btn-primary w-100">
+                                                                        Отправить
+                                                                    </button>
+                                                                </div>
 
 
-                                                        <!--                                                        </div>-->
+                                                            </form>
+
+
+                                                        </div>
                                                     </div>
-
-
-                                                    <!-- -------------------------------------------------------------------------------- -->
                                                 </div>
+
+
+                                                <!-- -------------------------------------------------------------------------------- -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
 </div>
-
-
-
+</div>
 
 
 <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
@@ -560,172 +599,90 @@
 </div>
 
 
+<div id="scroll-to"></div>
 
+<!-- START FOOTER -->
+<footer class="bg-white">
+    <div class="bottom_footer border-top-tran grey-bg  ">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <div class="align-items-center text-center justify-content-center f12">
+                        (c) 2023. ООО “Rozetka”
+                    </div>
 
-<div class="col-12">
-    <div class="bg-white">
-
-
-        <div class="form-wrapper">
-            <form id="form-contact" method="POST" class="contact-form"
-                  autocomplete="off" enctype="multipart/form-data">
-
-                <div class="preloader"></div>
-                <p class="contact-form__message"></p>
-                <div class="form-group mb-3">
-                    <label class="">
-                        Переваги
-                    </label>
-                    <!-- Поле с Переваги -->
-                    <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-                        <input name="name" type="text"
-                               class="contact-form__input form-control contact-form__input_name"
-                               placeholder="Переваги">
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="align-items-center text-center justify-content-center f12 sub-menu-linkswhite">
+                        <a style="text-decoration:underline" href="/newtemplate/page_info.php">Політика
+                            конфіденційності</a>
                     </div>
                 </div>
-
-                <div class="form-group mb-3">
-                    <label class="">
-                        Недоліки
-                    </label>
-                    <!-- Поле с Недоліки -->
-                    <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
-                        <input name="trouble" type="text"
-                               class="contact-form__input form-control contact-form__input_trouble"
-                               placeholder="Недоліки">
-                    </div>
-                </div>
-                <div class="form-group mb-3">
-                    <label class="">
-                        Коментар
-                    </label>
-                    <!-- Поле с Коментар -->
-                    <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
-                        <input name="comment" type="text"
-                               class="contact-form__input form-control contact-form__input_comment"
-                               placeholder="Недоліки">
-                    </div>
-                </div>
-                <div>
-
-                </div>
-                <div class="contact-form__input-wrapper">
-                    <input type="file" name="files[]"
-                           id="contact-form__input_file"
-                           class="contact-form__input contact-form__input_file"
-                           multiple>
-                    <label for="contact-form__input_file"
-                           class="contact-form__file-button">
-                        <span class="contact-form__file-text">Выберите файл</span>
-                    </label>
-                </div>
-
-
-                <!--Поле с темой в письме-->
-                <input name="theme" type="hidden"
-                       class="contact-form__input form-control contact-form__input_theme"
-                       value="Оценочкая форма с карточки товара">
-                <input name="theme1" type="hidden"
-                       class="contact-form__input form-control contact-form__input_theme"
-                       value="---------------------------">
-
-                <!--Кнопка отправки формы-->
-                <button type="submit"
-                        class="contact-form__button btn btn-lg btn-primary w-100">
-                    Отправить
-                </button>
-
-            </form>
-
-
-        </div>
-    </div>
-
-
-    <div id="scroll-to"></div>
-
-    <!-- START FOOTER -->
-    <footer class="bg-white">
-        <div class="bottom_footer border-top-tran grey-bg  ">
-            <div class="custom-container">
-                <div class="row">
-                    <div class="col-lg-4 ">
-                        <div class="align-items-center text-center justify-content-center f12">
-                            (c) 2023. ООО “Rozetka”
+                <div class="col-lg-4   sub-menu-linkswhiteicon">
+                    <ul class="social_icons text-center ">
+                        <div>
+                            <li><a href="#" class=""><i class="bi bi-telegram"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-whatsapp"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-youtube"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
                         </div>
 
-                    </div>
-                    <div class="col-lg-4 ">
-                        <div class="align-items-center text-center justify-content-center f12 sub-menu-linkswhite">
-                            <a style="text-decoration:underline" href="/newtemplate/page_info.php">Політика
-                                конфіденційності</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4   sub-menu-linkswhiteicon">
-                        <ul class="social_icons text-center ">
-                            <div>
-                                <li><a href="#" class=""><i class="bi bi-telegram"></i></a>
-                                </li>
-                                <li><a href="#" class=""><i class="bi bi-whatsapp"></i></a>
-                                </li>
-                                <li><a href="#" class=""><i class="bi bi-youtube"></i></a>
-                                </li>
-                                <li><a href="#" class=""><i class="bi bi-facebook"></i></a>
-                                </li>
-                                <li><a href="#" class=""><i class="bi bi-instagram"></i></a></li>
-                            </div>
-
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- END FOOTER -->
+    </div>
+</footer>
+<!-- END FOOTER -->
 
-    <div class="footer-sticky">
-        <div class="sticky-addcart bg-white pb-2 d-lg-none">
-            <div class="px-2">
-                <div>
-                    <div class="row">
-                        <div class="col-auto col-md-6 col-lg-auto col-sm-6 d-grid gap-2 pt-2">
+<div class="footer-sticky">
+    <div class="sticky-addcart bg-white pb-2 d-lg-none">
+        <div class="px-2">
+            <div>
+                <div class="row">
+                    <div class="col-auto col-md-6 col-lg-auto col-sm-6 d-grid gap-2 pt-2">
 
-                        </div>
-                        <div class="col col-md-6 col-lg col-sm-6 d-grid gap-2 pt-2">
-                            <button class="btn btn-lg btn-primary btn-addtocart w-100" type="button">
-                                У кошик
-                            </button>
-                        </div>
                     </div>
-                    <div class="d-none col-lg d-lg-grid gap-2 pt-3">
-                        <button
-                                class="btn btn-lg btn-outline-primary btn-addtocart"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModalCenteredScrollable"
-                                type="button"
-                        >
-                            Швидке замовлення
+                    <div class="col col-md-6 col-lg col-sm-6 d-grid gap-2 pt-2">
+                        <button class="btn btn-lg btn-primary btn-addtocart w-100" type="button">
+                            У кошик
                         </button>
                     </div>
                 </div>
-
+                <div class="d-none col-lg d-lg-grid gap-2 pt-3">
+                    <button
+                            class="btn btn-lg btn-outline-primary btn-addtocart"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModalCenteredScrollable"
+                            type="button"
+                    >
+                        Швидке замовлення
+                    </button>
+                </div>
             </div>
+
         </div>
     </div>
+</div>
 
-    <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
-         style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <div class="title2" id="exampleModalCenterTitle">Кошик</div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <div class="title2" id="exampleModalCenterTitle">Кошик</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
 
                         <template id="templateCard">
                             <div class="cart-product flex-lg-nowrap">
