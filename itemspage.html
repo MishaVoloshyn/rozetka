@@ -91,7 +91,6 @@
                     <img style="height: 36px;" src="newimg/logo.svg" alt="">
                 </a>
             </div>
-
             <div class="col-xl-2 col-lg-2 col-md-3">
                 <button
                         type="button"
@@ -117,7 +116,7 @@
                            style="border-color: #595757"
                            placeholder="Пошук товарів">
                     <button type="button" class="btn white bggreen border-start-0" style="border-color: #595757">
-                        <i class="bi bi-search "></i>
+                        <i class="bi bi-search"></i>
                     </button>
                 </div>
             </div>
@@ -130,7 +129,7 @@
                                    data-bs-target="#exampleModalCenter">
                                     <i class="bi bi-cart text-white"></i>
                                     <span id="cart_count1" class="cart_count"></span>
-                                    <span class="amount"><span class="currency_symbol"></span></span></a>
+                                </a>
                             </li>
                         </div>
                     </div>
@@ -167,7 +166,7 @@
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <span id="cart_count2" class="cart_count"></span>
+                                    <span id="cart_count2" class="cart_count">0</span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -420,7 +419,7 @@
                     </div>
                     <div class="col-12" >
                         <template id="template">
-                            <div class="col-6 col-lg-3">
+                            <div class="col-6 col-lg-3" data-price="{{price}}" data-brand="{{brand}}">
                                 <div class="card mt-2 mb-2">
                                     <div class="row mb-2 mt-2">
                                         <div class="col-9">
@@ -618,12 +617,12 @@
                             </div>
                             <div class="d-none d-lg-block p-2">{{price}}₴</div>
                             <div class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
-                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">
-                                    <span class="input-group-text">-</span>
-                                    <input type="text" class="form-control" value="1">
-                                    <span class="input-group-text">+</span>
-                                </div>
-                                <div class="p-2">totalPrice</div>
+<!--                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">-->
+<!--                                    <span class="input-group-text">-</span>-->
+<!--                                    <input type="text" class="form-control" value="1">-->
+<!--                                    <span class="input-group-text">+</span>-->
+<!--                                </div>-->
+<!--                                <div class="p-2">totalPrice</div>-->
                             </div>
                             <div class="d-none d-lg-block p-2">
                                 <button id="close-{{id}}" type="button" class="btn-close closeBtn1" aria-label="Close"></button>
@@ -646,9 +645,9 @@
                         </div>
                         <div class="col-6 col-lg-8">
                             <div class="text-end tb">
-                                <div> Сумма: <span id="sum"></span>₴</div>
-                                <div> Скидка: <span id="sale"></span>₴</div>
-                                <div> Разом: <span id="total"></span>₴</div>
+                                <div> Сумма: <span id="sum">0</span>₴</div>
+                                <div> Скидка: <span id="sale">0</span>₴</div>
+                                <div> Разом: <span id="total">0</span>₴</div>
                             </div>
                         </div>
                     </div>

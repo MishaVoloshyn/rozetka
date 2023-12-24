@@ -346,8 +346,10 @@ let sum = document.querySelector('#sum');
 let sale = document.querySelector('#sale');
 let total = document.querySelector('#total');
 
-
+//массив товаров в корзине
 let listCards = [];
+
+//массив промокодов
 let promoCode = [
     {
         code: "Rozetka2024",
@@ -363,36 +365,36 @@ let promoCode = [
     }
 ];
 
+//работа с шаблоном товара
 let template = document.querySelector('#template').innerHTML;
 let output = document.querySelector("#output");
-//CheckCounter();
-//const storedResult = localStorage.getItem("counter1");
-console.log(localStorage.getItem("counter1"));
-let res;
-if (localStorage.getItem("counter1") === 0) {
-    // Данные отсутствуют, выполняем запись
-    res = CheckCounter();
-    localStorage.setItem("counter1", res);
-    console.log(localStorage.getItem("counter1") + "one");
-} else if(localStorage.getItem("counter1") > 0) {
-    // Данные имеются, используем их
-    res = CheckCounter();
-    localStorage.setItem("counter1", res);
-    res = localStorage.getItem("counter1");
-    console.log(localStorage.getItem("counter1") + "sec");
-}
-counter1.textContent = res;
 
 //добавление товаров на страницу
 for (let i = 0; i < products.length; i++)
 {
     products[i].name  = products[i].full_name.slice(0, 60);
-    // let pr = numberWithSpaces(products[i].price);
-    // products[i].price = pr;
     const productData = products[i];
     let html = Mustache.render(template, productData);
     output.insertAdjacentHTML("beforeend", html);
 }
+
+//Сохранение кол-ва товаров в корзине на сервере
+const storedResult = localStorage.getItem("counter1");
+
+let res;
+if (storedResult === null)
+{
+    res = CheckCounter();
+    localStorage.setItem("counter1", res);
+}
+else
+{
+    res = localStorage.getItem("counter1");
+    //renderCart();
+}
+counter1.textContent = res;
+counter2.textContent = res;
+
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
@@ -412,11 +414,11 @@ function CountPrice() {
 function CheckCounter()
 {
     if(listCards.length === 0){
-        counter1.innerHTML = 0;
-        counter2.innerHTML = 0;
-        sum.innerHTML = 0;
-        sale.innerHTML = 0;
-        total.innerHTML = 0;
+        counter1.textContent = '0';
+        counter2.textContent = '0';
+        sum.textContent = '0';
+        sale.textContent = '0';
+        total.textContent = '0';
         return "0";
     }
     else{
@@ -476,22 +478,20 @@ document.getElementById("promoCode").addEventListener("change", (e) => {
     }
 });
 
-
 function TotalPrice()
 {
     alert("We are here!");
-
     let total = sum - promoCode[counterPromo].discount;
     console.log(total);
     return total;
 }
 
-
 //поиск id кликнутой кнопки
 const buttonPressed = e => {
     let cardId = e.target.id-1;
     addToCart(cardId);
-    result.innerHTML = `ID of <em>${e.target.innerHTML}</em> is <strong>${e.target.id}</strong>`;
+    //проверка
+    //result.innerHTML = `ID of <em>${e.target.innerHTML}</em> is <strong>${e.target.id}</strong>`;
 }
 
 for (let button of addButton) {
@@ -503,12 +503,32 @@ let templateCard = document.querySelector('#templateCard').innerHTML;
 let listCard = document.querySelector('#listCard');
 function addToCart(id)
 {
+    localStorage.setItem("counter1", listCards.length+1);
     const productInCart = products[id];
     listCards.push(productInCart);
-    console.log(listCards);
+    localStorage.setItem("listCards", JSON.stringify(listCards));
     let html = Mustache.render(templateCard, productInCart);
     listCard.insertAdjacentHTML("beforeend", html);
+
+    // Сохранение данных в локальное хранилище
     CheckCounter();
+}
+
+function renderCart()
+{
+    // Получение данных из локального хранилища
+    const storedData = localStorage.getItem("listCards");
+    // Преобразование строки в массив
+    const listCards = JSON.parse(storedData);
+    console.log(listCards.length);
+    for(let i = 0; i < listCards.length; i++)
+    {
+        const productCart = listCards[i];
+        let html = Mustache.render(templateCard, productCart);
+        listCard.insertAdjacentHTML("beforeend", html);
+        //let render = Mustache.render(template, {listCards});
+        //document.querySelector("#templateCard").innerHTML = render;
+    }
 }
 let closeBtn = document.getElementsByClassName("closeBtn1");
 console.log(closeBtn);
@@ -524,20 +544,7 @@ for (let button of closeBtn) {
     console.log("click!");
     //button.addEventListener("click", buttonClose);
 }
-function renderCart()
-{
 
-        for(let i = 0; i < listCards.length; i++)
-        {
-            const productInCart = products[i];
-            //listCards.push(productInCart);
-            console.log(listCards);
-            let html = Mustache.render(templateCard, productInCart);
-            listCard.insertAdjacentHTML("beforeend", html);
-            CheckCounter();
-        }
-
-}
 
 
 

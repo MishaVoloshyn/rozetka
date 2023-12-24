@@ -201,21 +201,6 @@
             <div class="col-xl-1 col-lg-2 col-md-2">
                 <ul class="navbar-nav attr-nav navbar-expand-lg justify-content-end" style="margin-top: 18px">
                     <div class="d-flex p-0">
-                        <!--                        <div class="d-none d-xl-block">-->
-                        <!--                            <li>-->
-                        <!--                                <a href="/profile.php" class="nav-link py-1">-->
-                        <!--                                    --><?php //include 'components/svg/user.php'; ?>
-                        <!--                                </a>-->
-                        <!--                            </li>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="d-none d-xl-block">-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#" class="nav-link py-1">-->
-                        <!--                                    --><?php //include 'components/svg/heart.php'; ?><!--<span-->
-                        <!--                                        class="wishlist_count">0</span>-->
-                        <!--                                </a>-->
-                        <!--                            </li>-->
-                        <!--                        </div>-->
                         <div class="">
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
@@ -287,15 +272,15 @@
 
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides fade">
-                            <img src="newimg/23.svg" style="width:100%">
+                            <img src="assets/img/slider-main-3.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides fade">
-                            <img src="newimg/24.jpg" style="width:100%">
+                            <img src="assets/img/slider-main-2.jpg" style="width:100%">
                         </div>
 
                         <div class="mySlides fade">
-                            <img src="newimg/25.jpg" style="width:100%">
+                            <img src="assets/img/slider-main-1.jpg" style="width:100%">
                         </div>
 
                         <!-- Next and previous buttons -->
@@ -310,29 +295,27 @@
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
-                    <div class="section pt-5 small_pb pb-5 overflow-hidden">
+                    <div class="section small_pb pb-5 overflow-hidden">
                         <div class="custom-container">
                             <div class="row">
-
                                 <div class="col-xl-12">
-                                    <div class="row align-items-center pt-3">
-
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                    <div class="row align-items-center pt-2 ">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/1.svg" alt="">
                                         </div>
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/2.svg" alt="">
                                         </div>
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/3.svg" alt="">
                                         </div>
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/4.svg" alt="">
                                         </div>
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/5.svg" alt="">
                                         </div>
-                                        <div class="col-lg-2 pt-5 col-sm-4 col-6 d-flex justify-content-center">
+                                        <div class="col-lg-2 col-sm-4 col-6 d-flex justify-content-center">
                                             <img src="newimg/6.svg" alt="">
                                         </div>
                                     </div>
@@ -469,22 +452,6 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="bg-white">
     <div class="bottom_footer border-top-tran grey-bg  ">
         <div class="custom-container">
@@ -520,6 +487,7 @@
         </div>
     </div>
 </footer>
+
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
      style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -531,32 +499,35 @@
             <div class="modal-body">
                 <div class="mb-3">
 
-                    <div class="cart-product flex-lg-nowrap">
-                        <div class="d-flex flex-grow-1 align-items-center">
-                            <a href="/newtemplate/product.php" class="d-block p-2 flex-shrink-0">
-                                <img class="img-fluid" src="/assets/newimg/smcat.svg" alt="">
-                            </a>
-                            <a href="/newtemplate/product.php" class="p-2">
-                                Товар название и активная ссылка открыть карточку товара
-                            </a>
-                            <div class="d-lg-none p-2">
-                                <button type="button" class="btn-close" aria-label="Close"></button>
+                    <template id="templateCard">
+                        <div class="cart-product flex-lg-nowrap">
+                            <div class="d-flex flex-grow-1 align-items-center">
+                                <a href="" class="d-block p-2 flex-shrink-0">
+                                    <img class="img-fluid" src="/assets/img/{{image}}" alt="" style="height: 30px">
+                                </a>
+                                <a href="" class="p-2">
+                                    {{name}}
+                                </a>
+                                <div class="d-lg-none p-2">
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">{{price}}₴</div>
+                            <div class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
+                                <div style="max-width: 115px" class="input-group flex-nowrap p-2">
+                                    <span class="input-group-text">-</span>
+                                    <input type="text" class="form-control" value="1">
+                                    <span class="input-group-text">+</span>
+                                </div>
+                                <div class="p-2">totalPrice</div>
+                            </div>
+                            <div class="d-none d-lg-block p-2">
+                                <button id="close-{{id}}" type="button" class="btn-close closeBtn1" aria-label="Close"></button>
                             </div>
                         </div>
-                        <div class="d-none d-lg-block p-2">4349.00</div>
-                        <div
-                                class="col-12 col-lg-auto d-flex align-items-center justify-content-between justify-content-lg-start">
-                            <div style="max-width: 115px" class="input-group flex-nowrap p-2">
-                                <span class="input-group-text">-</span>
-                                <input type="text" class="form-control" value="1">
-                                <span class="input-group-text">+</span>
-                            </div>
-                            <div class="p-2">13047.00</div>
-                        </div>
-                        <div class="d-none d-lg-block p-2">
-                            <button type="button" class="btn-close" aria-label="Close"></button>
-                        </div>
-                    </div>
+                    </template>
+
+                    <div id="listCard"></div>
 
                 </div>
                 <div class="col-12">
@@ -565,14 +536,15 @@
                             <div class="text-start tb">
                                 <label for="">Промокод</label>
                                 <input type="email" class="form-control"
-                                       id="exampleFormControlInput1">
+                                       id="promoCode">
                             </div>
+                            <div id="promoCodeStatus"></div>
                         </div>
                         <div class="col-6 col-lg-8">
                             <div class="text-end tb">
-                                <div> Сумма: 91414.00</div>
-                                <div> Скидка: 1000.00</div>
-                                <div> Разом: 81414.00</div>
+                                <div> Сумма: <span id="sum">0</span>₴</div>
+                                <div> Скидка: <span id="sale">0</span>₴</div>
+                                <div> Разом: <span id="total">0</span>₴</div>
                             </div>
                         </div>
                     </div>
@@ -592,8 +564,7 @@
     </div>
 </div>
 
-
-<script >
+<script>
     let slideIndex = 0;
     showSlides();
 
@@ -609,8 +580,6 @@
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
 </script>
-
-
 
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
