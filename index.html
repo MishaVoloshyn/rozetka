@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>HELLO</title>
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -202,13 +201,27 @@
             <div class="col-xl-1 col-lg-2 col-md-2">
                 <ul class="navbar-nav attr-nav navbar-expand-lg justify-content-end" style="margin-top: 18px">
                     <div class="d-flex p-0">
-
+                        <!--                        <div class="d-none d-xl-block">-->
+                        <!--                            <li>-->
+                        <!--                                <a href="/profile.php" class="nav-link py-1">-->
+                        <!--                                    --><?php //include 'components/svg/user.php'; ?>
+                        <!--                                </a>-->
+                        <!--                            </li>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="d-none d-xl-block">-->
+                        <!--                            <li>-->
+                        <!--                                <a href="#" class="nav-link py-1">-->
+                        <!--                                    --><?php //include 'components/svg/heart.php'; ?><!--<span-->
+                        <!--                                        class="wishlist_count">0</span>-->
+                        <!--                                </a>-->
+                        <!--                            </li>-->
+                        <!--                        </div>-->
                         <div class="">
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <span
-                                            class="cart_count">2</span>
+                                    <i class="bi bi-cart text-white"></i>
+                                    <span id="cart_count1" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -216,15 +229,6 @@
                 </ul>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
 
 
         <!--        Mobile menu-->
@@ -255,8 +259,7 @@
                             <li class="dropdown cart_dropdown">
                                 <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <?php include 'components/svg/basket.php'; ?>
-                                    <span class="cart_count">2</span>
+                                    <span id="cart_count2" class="cart_count"></span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -268,6 +271,7 @@
 </header>
 
 <!-- END HEADER -->
+
 
 <!-- END MAIN CONTENT -->
 <div class="main_content">
@@ -638,7 +642,8 @@
 <script src="assets/js/slick.min.js"></script>
 <!-- scripts js -->
 <script src="assets/js/scripts.js"></script>
-
+<script src="assets/js/mustache.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>

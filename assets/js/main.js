@@ -1,5 +1,4 @@
-// Корзина
-
+// Все товары
 let products = [
     {
         id: 1,
@@ -338,9 +337,7 @@ let products = [
     }
 ];
 
-let list = document.querySelector('.list');
-let body = document.querySelector('body');
-
+//счетчик для корзины web+mobile
 let counter1 = document.querySelector('#cart_count1');
 let counter2 = document.querySelector('#cart_count2');
 
@@ -366,10 +363,25 @@ let promoCode = [
     }
 ];
 
-
 let template = document.querySelector('#template').innerHTML;
 let output = document.querySelector("#output");
-CheckCounter();
+//CheckCounter();
+//const storedResult = localStorage.getItem("counter1");
+console.log(localStorage.getItem("counter1"));
+let res;
+if (localStorage.getItem("counter1") === 0) {
+    // Данные отсутствуют, выполняем запись
+    res = CheckCounter();
+    localStorage.setItem("counter1", res);
+    console.log(localStorage.getItem("counter1") + "one");
+} else if(localStorage.getItem("counter1") > 0) {
+    // Данные имеются, используем их
+    res = CheckCounter();
+    localStorage.setItem("counter1", res);
+    res = localStorage.getItem("counter1");
+    console.log(localStorage.getItem("counter1") + "sec");
+}
+counter1.textContent = res;
 
 //добавление товаров на страницу
 for (let i = 0; i < products.length; i++)
@@ -405,16 +417,16 @@ function CheckCounter()
         sum.innerHTML = 0;
         sale.innerHTML = 0;
         total.innerHTML = 0;
+        return "0";
     }
     else{
         counter1.textContent = listCards.length;
         counter1.textContent = listCards.length;
         sum.textContent = CountPrice();
         total.textContent = sum.textContent;
-
+        return listCards.length;
     }
 }
-
 
 // Функция для проверки промокода
 let counterPromo = 0;
@@ -438,18 +450,29 @@ document.getElementById("promoCode").addEventListener("change", (e) => {
     let isPromoCodeValid = checkPromoCode(promo);
 
     // Показать сообщение о результате проверки
+    let promoCodeStatus = document.getElementById("promoCodeStatus");
+
     if (isPromoCodeValid) {
-        document.getElementById("promoCodeStatus").innerHTML = "Промокод действителен";
+        promoCodeStatus.innerHTML = "Промокод действителен";
+        promoCodeStatus.style.color = "green";
         sale.textContent = promoCode[counterPromo].discount;
         total.textContent = sum.textContent - sale.textContent;
     } else {
-        document.getElementById("promoCodeStatus").innerHTML = "Промокод недействителен";
+        promoCodeStatus.innerHTML = "Промокод недействителен";
+        promoCodeStatus.style.color = "red";
         total.textContent = sum.textContent
     }
     if(promo === '')
     {
-        document.getElementById("promoCodeStatus").innerHTML = "";
+        promoCodeStatus.innerHTML = "";
         total.textContent = sum.textContent;
+    }
+    if(listCards.length === 0)
+    {
+        promoCodeStatus.innerHTML = "Добавьте товар в корзину!";
+        promoCodeStatus.style.color = "red";
+        sale.textContent = 0;
+        total.textContent = 0;
     }
 });
 
