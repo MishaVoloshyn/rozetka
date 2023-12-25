@@ -218,10 +218,10 @@
                                                 <div class="col-sm-6 mb-0 pb-0">
                                                     <ul id="imageGallery" style="list-style: none">
                                                         <li data-thumb="assets/img/white.png" style="list-style: none">
-                                                            <img src="assets/img/1_slider-2.webp">
+                                                            <img src="assets/img/{{image}}">
                                                         </li>
                                                         <li data-thumb="assets/img/white.png" style="list-style: none">
-                                                            <img src="assets/img/1.webp">
+                                                            <img src="assets/img/{{image2}}">
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -426,9 +426,12 @@
                                 <input name="theme1" type="hidden"
                                        class="contact-form__input form-control contact-form__input_theme1"
                                        value="---------------------------">
-                                <input name="theme2" type="hidden"
+                                <input name="theme2" type="hidden" id="valName"
                                        class="contact-form__input form-control contact-form__input_theme2"
-                                       value=" {{full_name}}">
+                                       value="">
+                                <input name="theme3" type="hidden" id="valCode"
+                                       class="contact-form__input form-control contact-form__input_theme3"
+                                       value="">
 
                                 <!--Кнопка отправки формы-->
                                 <div class="pt-3">
@@ -446,16 +449,7 @@
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 
 <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
      aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
