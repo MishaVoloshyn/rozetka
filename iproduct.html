@@ -68,6 +68,8 @@
 
 <!-- START HEADER -->
 
+
+<!--    Main panel-->
 <header class="header_wrap sticky">
     <div class="custom-container">
         <!--        Desktop menu-->
@@ -88,7 +90,6 @@
                     <img style="height: 36px;" src="newimg/logo.svg" alt="">
                 </a>
             </div>
-
             <div class="col-xl-2 col-lg-2 col-md-3">
                 <button
                         type="button"
@@ -114,37 +115,20 @@
                            style="border-color: #595757"
                            placeholder="Пошук товарів">
                     <button type="button" class="btn white bggreen border-start-0" style="border-color: #595757">
-                        <i class="bi bi-search "></i>
+                        <i class="bi bi-search"></i>
                     </button>
                 </div>
             </div>
             <div class="col-xl-1 col-lg-2 col-md-2">
                 <ul class="navbar-nav attr-nav navbar-expand-lg justify-content-end" style="margin-top: 18px">
                     <div class="d-flex p-0">
-                        <!--                        <div class="d-none d-xl-block">-->
-                        <!--                            <li>-->
-                        <!--                                <a href="/profile.php" class="nav-link py-1">-->
-                        <!--                                    --><?php //include 'components/svg/user.php'; ?>
-                        <!--                                </a>-->
-                        <!--                            </li>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="d-none d-xl-block">-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#" class="nav-link py-1">-->
-                        <!--                                    --><?php //include 'components/svg/heart.php'; ?>
-                        <!--<span-->
-                        <!--                                        class="wishlist_count">0</span>-->
-                        <!--                                </a>-->
-                        <!--                            </li>-->
-                        <!--                        </div>-->
                         <div class="">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php"
-                                   data-bs-toggle="modal"
+                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
                                     <i class="bi bi-cart text-white"></i>
                                     <span id="cart_count1" class="cart_count"></span>
-                                    <span class="amount"><span class="currency_symbol"></span></span></a>
+                                </a>
                             </li>
                         </div>
                     </div>
@@ -179,10 +163,9 @@
                     <div class="row p-0">
                         <div class="col-12 p-0">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php"
-                                   data-bs-toggle="modal"
+                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
-                                    <span id="cart_count2" class="cart_count"></span>
+                                    <span id="cart_count2" class="cart_count">0</span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
                             </li>
                         </div>
@@ -192,6 +175,7 @@
         </div>
     </div>
 </header>
+
 
 <!--START-->
 <template id="temp_product">
@@ -226,16 +210,6 @@
                                                             data-infinite="false"
                                                             data-arrows="false"
                                                     >
-<!--                                                        <?php foreach (range(1, 4) as $i): ?>-->
-<!--                                                        <div class="item slick-slide">-->
-<!--                                                            <a href="#" class="product_gallery_item active"-->
-<!--                                                               data-image="/assets/newimg/catpr.svg"-->
-<!--                                                               data-zoom-image="/assets/newimg/catpr.svg"-->
-<!--                                                               tabindex="0">-->
-<!--                                                                <img src="/assets/img/1.webp" alt="product_small_img1">-->
-<!--                                                            </a>-->
-<!--                                                        </div>-->
-<!--                                                        <?php endforeach; ?>-->
                                                     </div>
                                                 </div>
                                                 <div class="d-none d-lg-block">
@@ -362,9 +336,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="pb-5 pt-5">
-                                        <div class="row ">
-                                            <div class="col-lg-7 col-12">
+                                    <div class="pt-5 d-flex">
+<!--                                       //<div class="row">-->
+                                            <div class="col-lg-6 col-12">
                                                 <div class="title2 text-start">
                                                     Описание:
                                                 </div>
@@ -381,6 +355,12 @@
                                                     </div>
                                                 </div>
                                             </div>
+<!--                                        </div>-->
+                                    </div>
+</template>
+                                    <div id="outProduct"></div>
+
+                                    <div class="row justify-content-end d-flex">
                                             <div class="col-lg-5 col-12">
                                                 <div class="border2 m-2 p-5">
                                                     <div class="title2 align-items-center d-flex justify-content-center">
@@ -490,7 +470,7 @@
                                                         <!-- -------------------- -->
                                                     </div>
                                                 </div>
-
+                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -502,8 +482,6 @@
             </div>
         </div>
     </div>
-</template>
-<div id="outProduct"></div>
 
 <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
      aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
