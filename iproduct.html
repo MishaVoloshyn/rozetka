@@ -124,7 +124,8 @@
                     <div class="d-flex p-0">
                         <div class="">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php" data-bs-toggle="modal"
+                                <a class="nav-link cart_trigger py-1" href="/newtemplate/basket.php"
+                                   data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
                                     <i class="bi bi-cart text-white"></i>
                                     <span id="cart_count1" class="cart_count"></span>
@@ -163,7 +164,8 @@
                     <div class="row p-0">
                         <div class="col-12 p-0">
                             <li class="dropdown cart_dropdown">
-                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php" data-bs-toggle="modal"
+                                <a class="nav-link py-2 cart_trigger" href="/newtemplate/basket.php"
+                                   data-bs-toggle="modal"
                                    data-bs-target="#exampleModalCenter">
                                     <span id="cart_count2" class="cart_count">0</span>
                                     <span class="amount"><span class="currency_symbol"></span></span></a>
@@ -185,7 +187,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="tab-style3">
-                            <ul class="flex-nowrap nav nav-tabs mw-100 overflow-x-auto overflow-y-hidden" role="tablist">
+                            <ul class="flex-nowrap nav nav-tabs mw-100 overflow-x-auto overflow-y-hidden"
+                                role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="Main-tab" data-bs-toggle="tab" href="#main"
                                        role="tab" aria-controls="main" aria-selected="false">Опис</a>
@@ -234,9 +237,13 @@
                                                         <div class="product_description">
                                                             <div class="row pt-3 product_sort_info">
                                                                 <div class="col-12 ">
-                                                                    <div><span class="fw-bold">Артікул:</span> {{code}}</div>
-                                                                    <div><span class="fw-bold">Продавець:</span> Rozetka</div>
-                                                                    <div><span class="fw-bold">Доставка:</span> Готовий до відправлення</div>
+                                                                    <div><span class="fw-bold">Артікул:</span> {{code}}
+                                                                    </div>
+                                                                    <div><span class="fw-bold">Продавець:</span> Rozetka
+                                                                    </div>
+                                                                    <div><span class="fw-bold">Доставка:</span> Готовий
+                                                                        до відправлення
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="rating1 text-start">
@@ -297,152 +304,158 @@
                                         </div>
                                     </div>
                                     <div class="pt-0 d-flex">
-<!--                                       //<div class="row">-->
-                                            <div class="col-lg-6 col-12">
-                                                <div class="title2 text-start">
-                                                    Описание:
-                                                </div>
-                                                <div class="text-start pt-1 base-text1">
-                                                    <b>Диагональ дисплея:</b><span class="text-blue"> {{diagonal}}</span><br>
-                                                    <b>Максимальное разрешение дисплея:</b><span class="text-blue"> {{max_res}}</span><br>
-                                                    <b>Время реакции матрицы: </b><span class="text-blue"> {{matrix}}</span><br>
-                                                    <b>Яркость дисплея:</b><span class="text-blue"> {{brightness}}</span><br>
-                                                    <b>Тип матрицы:</b><span class="text-blue"> {{mtype}}</span><br>
-                                                    <b>Контрастность дисплея:</b><span class="text-blue"> {{contrast}}</span><br>
-                                                    <b>Особенности:</b><span class="text-blue"> {{peculiarities}}</span><br>
-                                                    <div class="pt-2">
-                                                        <a href="#" class="fw-bold text-blue">Подробнее о товаре</a>
-                                                    </div>
+                                        <!--                                       //<div class="row">-->
+                                        <div class="col-lg-6 col-12">
+                                            <div class="title2 text-start">
+                                                Описание:
+                                            </div>
+                                            <div class="text-start pt-1 base-text1">
+                                                <b>Диагональ дисплея:</b><span
+                                                    class="text-blue"> {{diagonal}}</span><br>
+                                                <b>Максимальное разрешение дисплея:</b><span class="text-blue"> {{max_res}}</span><br>
+                                                <b>Время реакции матрицы: </b><span class="text-blue"> {{matrix}}</span><br>
+                                                <b>Яркость дисплея:</b><span
+                                                    class="text-blue"> {{brightness}}</span><br>
+                                                <b>Тип матрицы:</b><span class="text-blue"> {{mtype}}</span><br>
+                                                <b>Контрастность дисплея:</b><span
+                                                    class="text-blue"> {{contrast}}</span><br>
+                                                <b>Особенности:</b><span class="text-blue"> {{peculiarities}}</span><br>
+                                                <div class="pt-2">
+                                                    <a href="#" class="fw-bold text-blue">Подробнее о товаре</a>
                                                 </div>
                                             </div>
-<!--                                        </div>-->
+                                        </div>
+                                        <!--                                        </div>-->
                                     </div>
                                 </div>
 </template>
-                                    <div id="outProduct"></div>
+<div id="outProduct"></div>
 
-                                    <div class="row justify-content-end d-flex">
-                                            <div class="col-lg-5 col-12">
-                                                <div class="border2 m-2 p-5">
-                                                    <div class="title2 align-items-center d-flex justify-content-center">
-                                                        Залишити відгук про товар
-                                                    </div>
-                                                    <div class="row pt-1">
-                                                        <div class="col-12">
-                                                            <div class="bg-white">
-                                                                <div class="form-wrapper">
-                                                                    <form id="form-contact" method="POST"
-                                                                          class="contact-form"
-                                                                          autocomplete="off"
-                                                                          enctype="multipart/form-data">
+<div class="row justify-content-end d-flex">
+    <div class="col-lg-5 col-12">
+        <div class="border2 m-2 p-5">
+            <div class="title2 align-items-center d-flex justify-content-center">
+                Залишити відгук про товар
+            </div>
+            <div class="row pt-1">
+                <div class="col-12">
+                    <div class="bg-white">
+                        <div class="form-wrapper">
+                            <form id="form-contact" method="POST"
+                                  class="contact-form"
+                                  autocomplete="off"
+                                  enctype="multipart/form-data">
 
-                                                                        <div class="preloader"></div>
-                                                                        <p class="contact-form__message"></p>
+                                <div class="preloader"></div>
+                                <p class="contact-form__message"></p>
 
-                                                                        <div class="form-group mb-3">
-                                                                            <label class="">
-                                                                                Оцінка(1-5☆)
-                                                                            </label>
-                                                                            <!-- Поле с Переваги -->
-                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_starCount">
-                                                                                <input name="starCount" type="text"
-                                                                                       class="contact-form__input form-control contact-form__input_starCount"
-                                                                                       placeholder="Оцените товар от 1-5">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="form-group mb-3">
-                                                                            <label class="">
-                                                                                Переваги
-                                                                            </label>
-                                                                            <!-- Поле с Переваги -->
-                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-                                                                                <input name="name" type="text"
-                                                                                       class="contact-form__input form-control contact-form__input_name"
-                                                                                       placeholder="Переваги">
-                                                                            </div>
-                                                                        </div>
+                                <div class="form-group mb-3">
+                                    <label class="">
+                                        Оцінка(1-5☆)
+                                    </label>
+                                    <!-- Поле с Переваги -->
+                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_starCount">
+                                        <input name="starCount" type="text"
+                                               class="contact-form__input form-control contact-form__input_starCount"
+                                               placeholder="Оцените товар от 1-5">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="">
+                                        Переваги
+                                    </label>
+                                    <!-- Поле с Переваги -->
+                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                                        <input name="name" type="text"
+                                               class="contact-form__input form-control contact-form__input_name"
+                                               placeholder="Переваги">
+                                    </div>
+                                </div>
 
-                                                                        <div class="form-group mb-3">
-                                                                            <label class="">
-                                                                                Недоліки
-                                                                            </label>
-                                                                            <!-- Поле с Недоліки -->
-                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
-                                                                                <input name="trouble" type="text"
-                                                                                       class="contact-form__input form-control contact-form__input_trouble"
-                                                                                       placeholder="Недоліки">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="form-group mb-3">
-                                                                            <label class="">
-                                                                                Коментар
-                                                                            </label>
-                                                                            <!-- Поле с Коментар -->
-                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
-                                                                                <input name="comment" type="text"
-                                                                                       class="contact-form__input form-control contact-form__input_comment"
-                                                                                       placeholder="Недоліки">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="form-group mb-3">
-                                                                                <label class="">
-                                                                                    Телефон
-                                                                                </label>
-                                                                                <!-- Поле с Коментар -->
-                                                                                <!-- Поле с Коментар -->
-                                                                                <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
-                                                                                    <input name="phone" type="text"
-                                                                                           class="contact-form__input form-control contact-form__input_phone"
-                                                                                           placeholder="Телефон">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="contact-form__input-wrapper">
-                                                                            <input type="file" name="files[]"
-                                                                                   id="contact-form__input_file"
-                                                                                   class="contact-form__input contact-form__input_file"
-                                                                                   multiple>
-                                                                            <label for="contact-form__input_file"
-                                                                                   class="contact-form__file-button">
-                                                                                <span class="contact-form__file-text">Выберите файл</span>
-                                                                            </label>
-                                                                        </div>
-
-                                                                        <!--Поле с темой в письме-->
-                                                                        <input name="theme" type="hidden"
-                                                                               class="contact-form__input form-control contact-form__input_theme"
-                                                                               value="Оценочкая форма с карточки товара">
-                                                                        <input name="theme1" type="hidden"
-                                                                               class="contact-form__input form-control contact-form__input_theme1"
-                                                                               value="---------------------------">
-
-                                                                        <!--Кнопка отправки формы-->
-                                                                        <div class="pt-3">
-                                                                            <button type="submit"
-                                                                                    class="contact-form__button btn btn-lg btn-primary w-100">
-                                                                                Отправить
-                                                                            </button>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- -------------------- -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
+                                <div class="form-group mb-3">
+                                    <label class="">
+                                        Недоліки
+                                    </label>
+                                    <!-- Поле с Недоліки -->
+                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
+                                        <input name="trouble" type="text"
+                                               class="contact-form__input form-control contact-form__input_trouble"
+                                               placeholder="Недоліки">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="">
+                                        Коментар
+                                    </label>
+                                    <!-- Поле с Коментар -->
+                                    <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
+                                        <input name="comment" type="text"
+                                               class="contact-form__input form-control contact-form__input_comment"
+                                               placeholder="Недоліки">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-group mb-3">
+                                        <label class="">
+                                            Телефон
+                                        </label>
+                                        <!-- Поле с Коментар -->
+                                        <!-- Поле с Коментар -->
+                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+                                            <input name="phone" type="text"
+                                                   class="contact-form__input form-control contact-form__input_phone"
+                                                   placeholder="Телефон">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="contact-form__input-wrapper">
+                                    <input type="file" name="files[]"
+                                           id="contact-form__input_file"
+                                           class="contact-form__input contact-form__input_file"
+                                           multiple>
+                                    <label for="contact-form__input_file"
+                                           class="contact-form__file-button">
+                                        <span class="contact-form__file-text">Выберите файл</span>
+                                    </label>
+                                </div>
+
+                                <!--Поле с темой в письме-->
+                                <input name="theme" type="hidden"
+                                       class="contact-form__input form-control contact-form__input_theme"
+                                       value="Оценочкая форма с карточки товара">
+                                <input name="theme1" type="hidden"
+                                       class="contact-form__input form-control contact-form__input_theme1"
+                                       value="---------------------------">
+                                <input name="theme2" type="hidden"
+                                       class="contact-form__input form-control contact-form__input_theme2"
+                                       value=" {{full_name}}">
+
+                                <!--Кнопка отправки формы-->
+                                <div class="pt-3">
+                                    <button type="submit"
+                                            class="contact-form__button btn btn-lg btn-primary w-100">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- -------------------- -->
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
      aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
@@ -656,22 +669,22 @@
 <script>
 
     // Кастомизация поля с файлом
-    let inputs = document.querySelectorAll('.contact-form__input_file');
-    Array.prototype.forEach.call(inputs, function (input) {
-        let label = input.nextElementSibling,
-            labelVal = label.querySelector('.contact-form__file-text').innerText;
-
-        input.addEventListener('change', function (e) {
-            let countFiles = '';
-            if (this.files && this.files.length >= 1)
-                countFiles = this.files.length;
-
-            if (countFiles)
-                label.querySelector('.contact-form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
-            else
-                label.querySelector('.contact-form__file-text').innerText = labelVal;
-        });
-    });
+    // let inputs = document.querySelectorAll('.contact-form__input_file');
+    // Array.prototype.forEach.call(inputs, function (input) {
+    //     let label = input.nextElementSibling,
+    //         labelVal = label.querySelector('.contact-form__file-text').innerText;
+    //
+    //     input.addEventListener('change', function (e) {
+    //         let countFiles = '';
+    //         if (this.files && this.files.length >= 1)
+    //             countFiles = this.files.length;
+    //
+    //         if (countFiles)
+    //             label.querySelector('.contact-form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
+    //         else
+    //             label.querySelector('.contact-form__file-text').innerText = labelVal;
+    //     });
+    // });
 
 </script>
 

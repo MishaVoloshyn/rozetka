@@ -1,4 +1,5 @@
 const filterBOX = document.querySelectorAll('.box')
+console.log(filterBOX)
 
 document.querySelector('nav').addEventListener('click', event =>{
 

@@ -56,6 +56,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
+<style>
+    .hide{
+        opacity: 1;
+        animation-name: test;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes test {
+        to{
+            opacity: 0;
+            min-width: 0;
+            min-height: 0;
+            padding: 0;
+            margin: 0;
+            border: 0;
+
+        }
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 10px 40px 10px 0;
+        cursor: pointer;
+    }
+</style>
 <body>
 
 <!-- LOADER -->
@@ -191,30 +215,30 @@
                     <div class="row">
                         <div class="accordion accordion-flush brbottom  pt-3" id="accordionFlushExample">
                             <div class="accordion-item">
-                                <hr>
-                                <div class="accordion-header  pb-2" id="flush-headingOne">
-                                    <button class=" p-0 bg-body border-0" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#flush-collapseOne" aria-expanded="true"
-                                            aria-controls="flush-collapseOne">
-                                        <span class="base-text fw-bold">Продавец</span>
-                                    </button>
-                                </div>
 
-                                <div id="flush-collapseOne" class="accordion-collapse collapse show "
-                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <ul class="list_brand sub-menu-links">
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals" value="">
-                                                <label class="form-check-label" for="Arrivals">
-                                                    <span>Rozetka</span></label>
-                                            </div>
-                                        </li>
+<!--                                <div class="accordion-header  pb-2" id="flush-headingOne">-->
+<!--                                    <button class=" p-0 bg-body border-0" type="button" data-bs-toggle="collapse"-->
+<!--                                            data-bs-target="#flush-collapseOne" aria-expanded="true"-->
+<!--                                            aria-controls="flush-collapseOne">-->
+<!--                                        <span class="base-text fw-bold">Продавец</span>-->
+<!--                                    </button>-->
+<!--                                </div>-->
 
-                                        <div class="widget"></div>
-                                    </ul>
-                                </div>
+<!--                                <div id="flush-collapseOne" class="accordion-collapse collapse show "-->
+<!--                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">-->
+<!--                                    <ul class="list_brand sub-menu-links">-->
+<!--                                        <li>-->
+<!--                                            <div class="custome-checkbox base-text">-->
+<!--                                                <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                       id="Arrivals" value="">-->
+<!--                                                <label class="form-check-label" for="Arrivals">-->
+<!--                                                    <span>Rozetka</span></label>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+
+<!--                                        <div class="widget"></div>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
                                 <hr>
                             </div>
                         </div>
@@ -258,64 +282,78 @@
 
                                 <div id="flush-collapseOne2" class="accordion-collapse collapse show "
                                      aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <ul class="list_brand sub-menu-links">
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" >
-                                                <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals2" value="ASUS">
-                                                <label class="form-check-label" for="Arrivals2">
-                                                    <span id="">ASUS</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals3" value="">
-                                                <label class="form-check-label" for="Arrivals3">
-                                                    <span>Acer</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals4" value="">
-                                                <label class="form-check-label" for="Arrivals4">
-                                                    <span>Sumsung</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals5" value="">
-                                                <label class="form-check-label" for="Arrivals5">
-                                                    <span>MSI</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals6" value="">
-                                                <label class="form-check-label" for="Arrivals6">
-                                                    <span>ASRock</span></label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox"
-                                                       id="Arrivals7" value="">
-                                                <label class="form-check-label" for="Arrivals7">
-                                                    <span>Hp</span></label>
-                                            </div>
-                                        </li>
+                                    <nav>
+                                        <ul>
+                                            <li data-f="AOC" >all</li>
+                                            <li data-f="ASUS" >text-red</li>
+                                            <li data-f="Acer" >text-green</li>
+                                            <li data-f="Samsung" >text-yellow</li>
+                                            <li data-f="MSI" >text-black</li>
+                                            <li data-f="ASRock" >text-black</li>
+                                            <li data-f="Hp" >text-black</li>
+                                        </ul>
+                                    </nav>
+                                    <nav>
+                                        <ul class="list_brand sub-menu-links">
+                                            <li >
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" >
+                                                    <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="ASUS">
+                                                <div  class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals2" value="ASUS">
+                                                    <label  class="form-check-label" for="Arrivals2">
+                                                        <span id="">ASUS</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="Acer">
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals3" value="Acer">
+                                                    <label  class="form-check-label" for="Arrivals3">
+                                                        <span>Acer</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="Sumsung">
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals4" value="Sumsung">
+                                                    <label  class="form-check-label" for="Arrivals4">
+                                                        <span>Sumsung</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="MSI">
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals5" value="MSI">
+                                                    <label  class="form-check-label" for="Arrivals5">
+                                                        <span>MSI</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="ASRock">
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals6" value="ASRock">
+                                                    <label  class="form-check-label" for="Arrivals6">
+                                                        <span>ASRock</span></label>
+                                                </div>
+                                            </li>
+                                            <li data-f="Hp">
+                                                <div class="custome-checkbox base-text">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox"
+                                                           id="Arrivals7" value="Hp">
+                                                    <label  class="form-check-label" for="Arrivals7">
+                                                        <span>Hp</span></label>
+                                                </div>
+                                            </li>
 
-                                        <div class="widget"></div>
-                                    </ul>
+                                            <div class="widget"></div>
+                                        </ul>
+                                    </nav>
+
                                 </div>
 
                             </div>
@@ -405,23 +443,15 @@
 <!--                                    </div>-->
 <!--                                </div>-->
                             </div>
-                            <div class="product_header_right align-items-center">
-                                <div class="custom_select">
-                                    <select class="form-control form-control-sm f11 h-25">
-                                        <option  value="order">По популярності</option>
-                                        <option id="sort-price12" >По ціні(зростання)</option>
-                                        <option id="sort-price22" >По ціні(спадання )</option>
-                                        <option value="price">По назві</option>
-                                    </select>
-                                </div>
-                                <button id="sort-price1" >По ціні(зростання)</button>
-                                <button id="sort-price2" >По ціні(зростання)</button>
+                            <div class="product_header_right align-items-center pt-3">
+                                <button type="button" id="sort-price1" class="btn btn-outline-success">По ціні(спадання)</button>
+                                <button type="button" id="sort-price2" class="btn btn-outline-success">По ціні(зростання)</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12" >
                         <template id="template">
-                            <div class="col-6 col-lg-3 {{brand}}" data-price="{{price}}" data-brand="{{brand}}">
+                            <div class="col-6 col-lg-3 box {{brand}}" data-price="{{price}}" data-brand="{{brand}}">
                                 <div class="card mt-2 mb-2">
                                     <div class="row mb-2 mt-2">
                                         <div class="col-9">
@@ -720,6 +750,8 @@
 </script>
 <script src="assets/js/toprightsort.js"></script>
 <script src="assets/js/mustache.js"></script>
+
+<script src="assets/js/sort.js"></script>
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <!-- popper min js -->

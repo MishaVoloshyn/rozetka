@@ -33,6 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['theme']) && !empty($_POST['theme'])) {
             $txt .= "Тема: " . strip_tags(urlencode($_POST['theme'])) . "%0A";
         }
+        if (isset($_POST['theme2']) && !empty($_POST['theme2'])) {
+            $txt .= "Назва: " . strip_tags(urlencode($_POST['theme2'])) . "%0A";
+        }
         if (!empty($_POST['starCount'])) {
             // Get the star count
             $starCount = $_POST['starCount'];
