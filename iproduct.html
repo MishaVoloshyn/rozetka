@@ -471,48 +471,37 @@
                             <p class="contact-form1__message"></p>
 
                             <div class="form-group mb-3">
+                                <!-- Поле с Имя -->
                                 <label class="">
-                                    Оцінка(1-5☆)
+                                    Имя
                                 </label>
-                                <!-- Поле с Переваги -->
                                 <div class="contact-form1__input-wrapper contact-form1__input-wrapper_starCount">
-                                    <input name="starCount" type="text"
-                                           class="contact-form1__input form-control contact-form1__input_starCount"
-                                           placeholder="Оцените товар от 1-5">
+                                    <input name="name" type="text"
+                                           class="contact-form1__input form-control contact-form1__input_name"
+                                           placeholder="Введите ваше имя">
                                 </div>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="">
-                                    Переваги
+                                    Прізвище
                                 </label>
-                                <!-- Поле с Переваги -->
+                                <!-- Поле с Прізвище -->
                                 <div class="contact-form1__input-wrapper contact-form1__input-wrapper_name">
-                                    <input name="name" type="text"
-                                           class="contact-form1__input form-control contact-form1__input_name"
-                                           placeholder="Переваги">
+                                    <input name="surname" type="text"
+                                           class="contact-form1__input form-control contact-form1__input_surname"
+                                           placeholder="Введите вашу фамилию">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label class="">
-                                    Недоліки
+                                    Email
                                 </label>
-                                <!-- Поле с Недоліки -->
+                                <!-- Поле с Email -->
                                 <div class="contact-form1__input-wrapper contact-form1__input-wrapper_trouble">
-                                    <input name="trouble" type="text"
-                                           class="contact-form1__input form-control contact-form1__input_trouble"
-                                           placeholder="Недоліки">
-                                </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label class="">
-                                    Коментар
-                                </label>
-                                <!-- Поле с Коментар -->
-                                <div class="contact-form1__input-wrapper contact-form1__input-wrapper_comment">
-                                    <input name="comment" type="text"
-                                           class="contact-form1__input form-control contact-form1__input_comment"
-                                           placeholder="Недоліки">
+                                    <input name="email" type="email"
+                                           class="contact-form1__input form-control contact-form1__input_email"
+                                           placeholder="example@gmail.com">
                                 </div>
                             </div>
                             <div>
@@ -521,35 +510,35 @@
                                         Телефон
                                     </label>
                                     <!-- Поле с Коментар -->
-                                    <!-- Поле с Коментар -->
                                     <div class="contact-form1__input-wrapper contact-form1__input-wrapper_phone">
-                                        <input name="phone" type="text"
+                                        <input name="phone" type="number"
                                                class="contact-form1__input form-control contact-form1__input_phone"
                                                placeholder="Телефон">
                                     </div>
                                 </div>
                             </div>
-                            <div class="contact-form1__input-wrapper">
-                                <input type="file" name="files[]"
-                                       id="contact-form1__input_file1"
-                                       class="contact-form1__input contact-form1__input_file"
-                                       multiple>
-                                <label for="contact-form__input_file"
-                                       class="contact-form1__file-button">
-                                    <span class="contact-form1__file-text">Выберите файл</span>
+                            <div class="form-group mb-3">
+                                <label class="">
+                                    Коментар
                                 </label>
+                                <!-- Поле с Коментар -->
+                                <div class="contact-form1__input-wrapper contact-form1__input-wrapper_comment">
+                                    <textarea name="comment" type="text"
+                                              class="contact-form1__input form-control contact-form1__input_comment"
+                                              placeholder=""></textarea>
+                                </div>
                             </div>
 
                             <!--Поле с темой в письме-->
                             <input name="theme" type="hidden"
                                    class="contact-form1__input form-control contact-form1__input_theme"
-                                   value="Оценочкая форма с карточки товара">
+                                   value="Оформление заказа">
                             <input name="theme1" type="hidden"
                                    class="contact-form1__input form-control contact-form1__input_theme1"
                                    value="---------------------------">
                             <input name="theme2" type="hidden"
                                    class="contact-form1__input form-control contact-form1__input_theme2"
-                                   value=" {{full_name}}">
+                                   value="" id="nameBuy">
 
                             <!--Кнопка отправки формы-->
                             <div class="pt-3">

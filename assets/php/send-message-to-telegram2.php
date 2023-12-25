@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Проверяем не пусты ли поля с именем и телефоном
-    if (!empty($_POST['name']) && !empty($_POST['trouble'])) {
+    if (!empty($_POST['name']) && !empty($_POST['phone'])) {
 
         // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
         $txt = "";
@@ -29,40 +29,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $txt .= "" . strip_tags(urlencode($_POST['theme1'])) . "%0A";
         }
 
-
         if (isset($_POST['theme']) && !empty($_POST['theme'])) {
             $txt .= "Тема: " . strip_tags(urlencode($_POST['theme'])) . "%0A";
         }
         if (isset($_POST['theme2']) && !empty($_POST['theme2'])) {
-            $txt .= "Назва: " . strip_tags(urlencode($_POST['theme2'])) . "%0A";
+            $txt .= "Товар: " . strip_tags(urlencode($_POST['theme2'])) . "%0A";
         }
-        if (!empty($_POST['starCount'])) {
-            // Get the star count
-            $starCount = $_POST['starCount'];
-
-            // Update the message text
-            $txt .= "Оцінка: " . $starCount . " ☆%0A";
-
-            // ...
+        if (isset($_POST['name']) && !empty($_POST['name'])) {
+            $txt .= "Имя заказчика: " . strip_tags(urlencode($_POST['name'])) . "%0A";
         }
         // Имя
-        if (isset($_POST['name']) && !empty($_POST['name'])) {
-            $txt .= "Переваги: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
+        if (isset($_POST['surname']) && !empty($_POST['surname'])) {
+            $txt .= "Фамилия заказчика: " . strip_tags(trim(urlencode($_POST['surname']))) . "%0A";
         }
 
         // Номер телефона
-        if (isset($_POST['trouble']) && !empty($_POST['trouble'])) {
-            $txt .= "Недоліки: " . strip_tags(trim(urlencode($_POST['trouble']))) . "%0A";
-        }
-        // Номер телефона
-        if (isset($_POST['comment']) && !empty($_POST['comment'])) {
-            $txt .= "Коментар: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
-        }
-        if (isset($_POST['comment']) && !empty($_POST['comment'])) {
-            $txt .= "Коментар: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
+        if (isset($_POST['email']) && !empty($_POST['email'])) {
+            $txt .= "Email: " . strip_tags(trim(urlencode($_POST['email']))) . "%0A";
         }
         if (isset($_POST['phone']) && !empty($_POST['phone'])) {
-            $txt .= "Phone: " . strip_tags(urlencode($_POST['phone'])) . "%0A";
+            $txt .= "Номер телефона: " . strip_tags(urlencode($_POST['phone'])) . "%0A";
+        }
+        if (isset($_POST['comment']) && !empty($_POST['comment'])) {
+            $txt .= "Комментарий: " . strip_tags(trim(urlencode($_POST['comment']))) . "%0A";
         }
         if (isset($_POST['theme1']) && !empty($_POST['theme1'])) {
             $txt .= "" . strip_tags(urlencode($_POST['theme1'])) . "%0A";

@@ -9814,7 +9814,7 @@ input[type="range"]::-moz-range-thumb {
   font-size: 14px;
 }
 .gray{
-  color: #D4D4D4;
+  color: #FFA900;
   font-size: 14px;
 }
 .orange{
@@ -9840,3 +9840,8 @@ ul {
   list-style-type: none;
 }
 
+.bi-star-fill .y
+{
+  color:#FFA900;
+
+}

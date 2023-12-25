@@ -28,5 +28,10 @@ window.onload=function(){
 
     let code = document.querySelector("#valCode");
     code.value = products[productID-1].code;
+
+    let nameProduct = document.querySelector("#nameBuy");
+    nameProduct.value = products[productID-1].full_name;
+
+
 }
 
