@@ -58,7 +58,7 @@
 </head>
 <style>
     .hide{
-        opacity: 1;
+        display: none;
         animation-name: test;
         animation-duration: 2s;
         animation-fill-mode: forwards;
@@ -284,75 +284,75 @@
                                      aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                     <nav>
                                         <ul>
-                                            <li data-f="AOC" >all</li>
-                                            <li data-f="ASUS" >text-red</li>
-                                            <li data-f="Acer" >text-green</li>
-                                            <li data-f="Samsung" >text-yellow</li>
-                                            <li data-f="MSI" >text-black</li>
-                                            <li data-f="ASRock" >text-black</li>
-                                            <li data-f="Hp" >text-black</li>
+                                            <li data-f="AOC">AOC</li>
+                                            <li data-f="ASUS">ASUS</li>
+                                            <li data-f="Acer">Acer</li>
+                                            <li data-f="Samsung">Samsung</li>
+                                            <li data-f="MSI">MSI</li>
+                                            <li data-f="ASRock" >ASRock</li>
+                                            <li data-f="HP">HP</li>
                                         </ul>
                                     </nav>
-                                    <nav>
-                                        <ul class="list_brand sub-menu-links">
-                                            <li >
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" >
-                                                    <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="ASUS">
-                                                <div  class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals2" value="ASUS">
-                                                    <label  class="form-check-label" for="Arrivals2">
-                                                        <span id="">ASUS</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="Acer">
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals3" value="Acer">
-                                                    <label  class="form-check-label" for="Arrivals3">
-                                                        <span>Acer</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="Sumsung">
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals4" value="Sumsung">
-                                                    <label  class="form-check-label" for="Arrivals4">
-                                                        <span>Sumsung</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="MSI">
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals5" value="MSI">
-                                                    <label  class="form-check-label" for="Arrivals5">
-                                                        <span>MSI</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="ASRock">
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals6" value="ASRock">
-                                                    <label  class="form-check-label" for="Arrivals6">
-                                                        <span>ASRock</span></label>
-                                                </div>
-                                            </li>
-                                            <li data-f="Hp">
-                                                <div class="custome-checkbox base-text">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox"
-                                                           id="Arrivals7" value="Hp">
-                                                    <label  class="form-check-label" for="Arrivals7">
-                                                        <span>Hp</span></label>
-                                                </div>
-                                            </li>
+<!--                                    <nav>-->
+<!--                                        <ul class="list_brand sub-menu-links">-->
+<!--                                            <li >-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" >-->
+<!--                                                    <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="ASUS">-->
+<!--                                                <div  class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals2" value="ASUS">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals2">-->
+<!--                                                        <span id="">ASUS</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="Acer">-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals3" value="Acer">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals3">-->
+<!--                                                        <span>Acer</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="Sumsung">-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals4" value="Sumsung">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals4">-->
+<!--                                                        <span>Sumsung</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="MSI">-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals5" value="MSI">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals5">-->
+<!--                                                        <span>MSI</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="ASRock">-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals6" value="ASRock">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals6">-->
+<!--                                                        <span>ASRock</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li data-f="Hp">-->
+<!--                                                <div class="custome-checkbox base-text">-->
+<!--                                                    <input class="form-check-input" type="checkbox" name="checkbox"-->
+<!--                                                           id="Arrivals7" value="Hp">-->
+<!--                                                    <label  class="form-check-label" for="Arrivals7">-->
+<!--                                                        <span>Hp</span></label>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
 
-                                            <div class="widget"></div>
-                                        </ul>
-                                    </nav>
+<!--                                            <div class="widget"></div>-->
+<!--                                        </ul>-->
+<!--                                    </nav>-->
 
                                 </div>
 
