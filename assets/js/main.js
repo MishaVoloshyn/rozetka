@@ -374,6 +374,7 @@ for (let i = 0; i < products.length; i++)
 {
     products[i].name  = products[i].full_name.slice(0, 60);
     const productData = products[i];
+    localStorage.setItem("products", products[i]);
     let html = Mustache.render(template, productData);
     output.insertAdjacentHTML("beforeend", html);
 }
@@ -478,14 +479,6 @@ document.getElementById("promoCode").addEventListener("change", (e) => {
     }
 });
 
-function TotalPrice()
-{
-    alert("We are here!");
-    let total = sum - promoCode[counterPromo].discount;
-    console.log(total);
-    return total;
-}
-
 //поиск id кликнутой кнопки
 const buttonPressed = e => {
     let cardId = e.target.id-1;
@@ -530,6 +523,7 @@ function renderCart()
         //document.querySelector("#templateCard").innerHTML = render;
     }
 }
+
 let closeBtn = document.getElementsByClassName("closeBtn1");
 console.log(closeBtn);
 const buttonClose = e => {
@@ -542,7 +536,7 @@ const buttonClose = e => {
 }
 for (let button of closeBtn) {
     console.log("click!");
-    //button.addEventListener("click", buttonClose);
+    button.addEventListener("click", buttonClose);
 }
 
 

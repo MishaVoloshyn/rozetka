@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -194,348 +193,317 @@
     </div>
 </header>
 
-
-<div class="main_content">
-    <div class="custom-container">
-
-
-        <div class="pb-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="tab-style3">
-                        <ul class="flex-nowrap nav nav-tabs mw-100 overflow-x-auto overflow-y-hidden" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="Main-tab" data-bs-toggle="tab" href="#main"
-                                   role="tab" aria-controls="main" aria-selected="false">Опис</a>
-                            </li>
+<!--START-->
+<template id="temp_product">
+    <div class="main_content" data-id="{{id}}">
+        <div class="custom-container">
+            <div class="pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-style3">
+                            <ul class="flex-nowrap nav nav-tabs mw-100 overflow-x-auto overflow-y-hidden" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="Main-tab" data-bs-toggle="tab" href="#main"
+                                       role="tab" aria-controls="main" aria-selected="false">Опис</a>
+                                </li>
 
                                 <div class="d-flex align-items-center justify-content-end pl20">
                                     <div class="border p-1 ">
-                                        <span class="fw-bold">Код: 396691521 </span>
+                                        <span class="fw-bold">Код: {{code}} </span>
                                     </div>
                                 </div>
-
-
-                        </ul>
-                        <div class="tab-content shop_info_tab">
-                            <div class="tab-pane fade active show overflow-hidden" id="main" role="tabpanel"
-                                 aria-labelledby="main-tab">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 mb-4 mb-md-0 pb-2">
-                                        <div class="product-image">
-                                            <div class="d-lg-none">
-                                                <div
-                                                        class="slick_slider"
-                                                        data-dots="true"
-                                                        data-infinite="false"
-                                                        data-arrows="false"
-                                                >
-                                                    <?php foreach (range(1, 4) as $i): ?>
-                                                    <div class="item slick-slide">
-                                                        <a href="#" class="product_gallery_item active"
-                                                           data-image="/assets/newimg/catpr.svg"
-                                                           data-zoom-image="/assets/newimg/catpr.svg"
-                                                           tabindex="0">
-                                                            <img src="/assets/newimg/catpr.svg"
-                                                                 alt="product_small_img1">
-                                                        </a>
+                            </ul>
+                            <div class="tab-content shop_info_tab">
+                                <div class="tab-pane fade active show overflow-hidden" id="main" role="tabpanel"
+                                     aria-labelledby="main-tab">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 mb-4 mb-md-0 pb-2">
+                                            <div class="product-image">
+                                                <div class="d-lg-none">
+                                                    <div
+                                                            class="slick_slider"
+                                                            data-dots="true"
+                                                            data-infinite="false"
+                                                            data-arrows="false"
+                                                    >
+<!--                                                        <?php foreach (range(1, 4) as $i): ?>-->
+<!--                                                        <div class="item slick-slide">-->
+<!--                                                            <a href="#" class="product_gallery_item active"-->
+<!--                                                               data-image="/assets/newimg/catpr.svg"-->
+<!--                                                               data-zoom-image="/assets/newimg/catpr.svg"-->
+<!--                                                               tabindex="0">-->
+<!--                                                                <img src="/assets/img/1.webp" alt="product_small_img1">-->
+<!--                                                            </a>-->
+<!--                                                        </div>-->
+<!--                                                        <?php endforeach; ?>-->
                                                     </div>
-                                                    <?php endforeach; ?>
                                                 </div>
-                                            </div>
-                                            <div class="d-none d-lg-block">
-                                                <div class="product_img_box">
-                                                    <img id="product_img" src="/assets/newimg/catpr.svg"
-                                                         alt="product_img1">
-                                                </div>
-                                                <div
-                                                        id="pr_item_gallery"
-                                                        class="product_gallery_item slick_slider slick-slider"
-                                                        data-slides-to-show="4"
-                                                        data-slides-to-scroll="1"
-                                                        data-infinite="false"
-                                                >
-                                                    <div class="item slick-slide">
-                                                        <a href="#" class="product_gallery_item active"
-                                                           data-image="/assets/newimg/catpr.svg"
-                                                           data-zoom-image="/assets/newimg/catpr.svg"
-                                                           tabindex="0">
-                                                            <img src="/assets/newimg/catpr.svg"
-                                                                 alt="product_small_img1">
-                                                        </a>
+                                                <div class="d-none d-lg-block">
+                                                    <div class="product_img_box">
+                                                        <img id="product_img" src="/assets/img/1_slider-2.webp"
+                                                             alt="product_img1">
                                                     </div>
-                                                    <div class="item slick-slide">
-                                                        <a href="#" class="product_gallery_item "
-                                                           data-image="/assets/newimg/catpr.svg"
-                                                           data-zoom-image="/assets/newimg/catpr.svg"
-                                                           tabindex="0">
-                                                            <img src="/assets/newimg/catpr.svg"
-                                                                 alt="product_small_img1">
-                                                        </a>
-                                                    </div>
-                                                    <div class="item slick-slide">
-                                                        <a href="#" class="product_gallery_item "
-                                                           data-image="/assets/newimg/catpr.svg"
-                                                           data-zoom-image="/assets/newimg/catpr.svg"
-                                                           tabindex="0">
-                                                            <img src="/assets/newimg/catpr.svg"
-                                                                 alt="product_small_img1">
-                                                        </a>
-                                                    </div>
-                                                    <div class="item slick-slide">
-                                                        <a href="#" class="product_gallery_item "
-                                                           data-image="/assets/newimg/catpr.svg"
-                                                           data-zoom-image="/assets/newimg/catpr.svg"
-                                                           tabindex="0">
-                                                            <img src="/assets/newimg/catpr.svg"
-                                                                 alt="product_small_img1">
-                                                        </a>
+                                                    <div
+                                                            id="pr_item_gallery"
+                                                            class="product_gallery_item slick_slider slick-slider"
+                                                            data-slides-to-show="4"
+                                                            data-slides-to-scroll="1"
+                                                            data-infinite="false"
+                                                    >
+                                                        <div class="item slick-slide">
+                                                            <a href="#" class="product_gallery_item active"
+                                                               data-image="/assets/newimg/catpr.svg"
+                                                               data-zoom-image="/assets/newimg/catpr.svg"
+                                                               tabindex="0">
+                                                                <img src="/assets/img/1_slider-2.webp"
+                                                                     alt="product_small_img1">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item slick-slide">
+                                                            <a href="#" class="product_gallery_item "
+                                                               data-image="/assets/newimg/catpr.svg"
+                                                               data-zoom-image="/assets/newimg/catpr.svg"
+                                                               tabindex="0">
+                                                                <img src="/assets/img/1_slider-4.webp"
+                                                                     alt="product_small_img1">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item slick-slide">
+                                                            <a href="#" class="product_gallery_item "
+                                                               data-image="/assets/newimg/catpr.svg"
+                                                               data-zoom-image="/assets/newimg/catpr.svg"
+                                                               tabindex="0">
+                                                                <img src="/assets/img/1_slider-5.webp"
+                                                                     alt="product_small_img1">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item slick-slide">
+                                                            <a href="#" class="product_gallery_item "
+                                                               data-image="/assets/newimg/catpr.svg"
+                                                               data-zoom-image="/assets/newimg/catpr.svg"
+                                                               tabindex="0">
+                                                                <img src="/assets/img/1_slider-6.webp"
+                                                                     alt="product_small_img1">
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="pr_detail">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="title1">
-                                                        Монитор 27" Samsung Odyssey AG50 S27AG502NI (LS27AG502PIXCI)
-                                                    </div>
-                                                    <div class="product_description">
-
-                                                        <div class="row pt-3 product_sort_info">
-                                                            <div class="col-12 ">
-                                                                <div><span class="fw-bold">Артікул:</span> 245124</div>
-                                                                <div><span class="fw-bold">Продавець:</span> ZooNova
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 pt-2">
-                                                                <div>
-                                                                    <span class="fw-bold">Доставка:</span> Готовий до
-                                                                    відправлення
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="rating1 text-start">
-                                                            <input type="radio" name="rating" value="1" id="1">
-                                                            <label for="1">
-                                                                <img src="newimg/star_01.svg" alt="" width="17">
-                                                            </label>
-                                                            <input type="radio" name="rating" value="2" id="2">
-                                                            <label for="2">
-                                                                <img src="newimg/star_03.svg" alt="" width="17">
-                                                            </label>
-                                                            <input type="radio" name="rating" value="3" id="3">
-                                                            <label for="3">
-                                                                <img src="newimg/star_02.svg" alt="" width="17">
-                                                            </label>
-                                                            <input type="radio" name="rating" value="5" id="4">
-                                                            <label for="4">
-                                                                <img src="newimg/star_02.svg" alt="" width="17">
-                                                            </label>
-                                                            <input type="radio" name="rating" value="5" id="5">
-                                                            <label for="5">
-                                                                <img src="newimg/star_02.svg" alt="" width="17">
-                                                            </label>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center justify-content-start">
-                                                        <del class="title3 text-grey px-2" style="margin-top: 4px">
-                                                            3397.19₴
-                                                        </del>
-                                                        <span class="title1">2717.75₴</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-10 pt-2 d-none d-lg-block">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="pr_detail">
                                                 <div class="row">
-                                                    <div class="col col-md-6 col-lg col-sm-6 d-grid gap-2 pt-2">
-                                                        <button class="btn btn-lg btn-primary btn-addtocart w-100"
-                                                                type="button">
-                                                            У кошик
-                                                        </button>
+                                                    <div class="col-12">
+                                                        <div class="title1">
+                                                            {{full_name}}
+                                                        </div>
+                                                        <div class="product_description">
+                                                            <div class="row pt-3 product_sort_info">
+                                                                <div class="col-12 ">
+                                                                    <div><span class="fw-bold">Артікул:</span> {{code}}</div>
+                                                                    <div><span class="fw-bold">Продавець:</span> Rozetka</div>
+                                                                    <div><span class="fw-bold">Доставка:</span> Готовий до відправлення</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rating1 text-start">
+                                                                <input type="radio" name="rating" value="1" id="1">
+                                                                <label for="1">
+                                                                    <img src="newimg/star_01.svg" alt="" width="17">
+                                                                </label>
+                                                                <input type="radio" name="rating" value="2" id="2">
+                                                                <label for="2">
+                                                                    <img src="newimg/star_03.svg" alt="" width="17">
+                                                                </label>
+                                                                <input type="radio" name="rating" value="3" id="3">
+                                                                <label for="3">
+                                                                    <img src="newimg/star_02.svg" alt="" width="17">
+                                                                </label>
+                                                                <input type="radio" name="rating" value="5" id="4">
+                                                                <label for="4">
+                                                                    <img src="newimg/star_02.svg" alt="" width="17">
+                                                                </label>
+                                                                <input type="radio" name="rating" value="5" id="5">
+                                                                <label for="5">
+                                                                    <img src="newimg/star_02.svg" alt="" width="17">
+                                                                </label>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <div class="col-12">
+                                                        <div class="d-flex align-items-center justify-content-start">
+                                                            <del class="title3 text-grey px-2" style="margin-top: 4px">
+                                                                {{prev_price}}₴
+                                                            </del>
+                                                            <span class="title1">{{price}}₴</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 pt-2 d-none d-lg-block">
+                                                    <div class="row">
+                                                        <div class="col col-md-6 col-lg col-sm-6 d-grid gap-2 pt-2">
+                                                            <button class="btn btn-lg btn-primary btn-addtocart w-100"
+                                                                    type="button">
+                                                                У кошик
+                                                            </button>
+                                                        </div>
 
-                                                    <div class="d-none col-lg-12 col-xxl d-lg-grid gap-2 pt-3 pt-xxl-2">
-                                                        <button
-                                                                class="btn btn-lg btn-outline-primary btn-addtocart"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModalCenteredScrollable"
-                                                                type="button"
-                                                        >
-                                                            Швидке замовлення
-                                                        </button>
+                                                        <div class="d-none col-lg-12 col-xxl d-lg-grid gap-2 pt-3 pt-xxl-2">
+                                                            <button
+                                                                    class="btn btn-lg btn-outline-primary btn-addtocart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModalCenteredScrollable"
+                                                                    type="button"
+                                                            >
+                                                                Швидке замовлення
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </div>
-                                </div>
-                                <div class="pb-5 pt-5">
-                                    <div class="row ">
-                                        <div class="col-lg-7 col-12">
-                                            <div class="title2 text-start">
-                                                Описание:
-                                            </div>
-                                            <div class="text-start pt-1 base-text1">
-                                                <b>Диагональ дисплея:</b><span class="text-blue">{{diagonal}}</span><br>
-                                                <b>Максимальное разрешение дисплея:</b><span class="text-blue">{{max_res}}</span><br>
-                                                <b>Время реакции матрицы:</b><span
-                                                    class="text-blue">{{matrix}}</span><br>
-                                                <b>Яркость дисплея:</b><span class="text-blue">{{brightness}}</span><br>
-                                                <b>Тип матрицы:</b><span class="text-blue">{{mtype}}</span><br>
-                                                <b>Контрастность дисплея:</b><span class="text-blue">{{contrast}}</span><br>
-                                                <b>Особенности::</b><span class="text-blue">{{peculiarities}}</span><br>
-                                                <div class="pt-2">
-                                                    <a href="#" class="fw-bold text-blue">Подробнее о товаре</a>
+                                    <div class="pb-5 pt-5">
+                                        <div class="row ">
+                                            <div class="col-lg-7 col-12">
+                                                <div class="title2 text-start">
+                                                    Описание:
                                                 </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-5 col-12">
-                                            <div class="border2 m-2 p-5">
-                                                <div class="title2 align-items-center d-flex justify-content-center">
-                                                    Залишити відгук про товар
+                                                <div class="text-start pt-1 base-text1">
+                                                    <b>Диагональ дисплея:</b><span class="text-blue"> {{diagonal}}</span><br>
+                                                    <b>Максимальное разрешение дисплея:</b><span class="text-blue"> {{max_res}}</span><br>
+                                                    <b>Время реакции матрицы: </b><span class="text-blue"> {{matrix}}</span><br>
+                                                    <b>Яркость дисплея:</b><span class="text-blue"> {{brightness}}</span><br>
+                                                    <b>Тип матрицы:</b><span class="text-blue"> {{mtype}}</span><br>
+                                                    <b>Контрастность дисплея:</b><span class="text-blue"> {{contrast}}</span><br>
+                                                    <b>Особенности:</b><span class="text-blue"> {{peculiarities}}</span><br>
+                                                    <div class="pt-2">
+                                                        <a href="#" class="fw-bold text-blue">Подробнее о товаре</a>
+                                                    </div>
                                                 </div>
-                                                <div class="row pt-1">
-                                                    <div class="col-12">
-                                                        <div class="bg-white">
+                                            </div>
+                                            <div class="col-lg-5 col-12">
+                                                <div class="border2 m-2 p-5">
+                                                    <div class="title2 align-items-center d-flex justify-content-center">
+                                                        Залишити відгук про товар
+                                                    </div>
+                                                    <div class="row pt-1">
+                                                        <div class="col-12">
+                                                            <div class="bg-white">
+                                                                <div class="form-wrapper">
+                                                                    <form id="form-contact" method="POST"
+                                                                          class="contact-form"
+                                                                          autocomplete="off"
+                                                                          enctype="multipart/form-data">
 
+                                                                        <div class="preloader"></div>
+                                                                        <p class="contact-form__message"></p>
 
-                                                            <div class="form-wrapper">
-                                                                <form id="form-contact" method="POST"
-                                                                      class="contact-form"
-                                                                      autocomplete="off"
-                                                                      enctype="multipart/form-data">
-
-                                                                    <div class="preloader"></div>
-                                                                    <p class="contact-form__message"></p>
-
-                                                                    <div class="form-group mb-3">
-                                                                        <label class="">
-                                                                            Оцінка(1-5☆)
-                                                                        </label>
-                                                                        <!-- Поле с Переваги -->
-                                                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_starCount">
-                                                                            <input name="starCount" type="text"
-                                                                                   class="contact-form__input form-control contact-form__input_starCount"
-                                                                                   placeholder="Оцените товар от 1-5">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group mb-3">
-                                                                        <label class="">
-                                                                            Переваги
-                                                                        </label>
-                                                                        <!-- Поле с Переваги -->
-                                                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-                                                                            <input name="name" type="text"
-                                                                                   class="contact-form__input form-control contact-form__input_name"
-                                                                                   placeholder="Переваги">
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="form-group mb-3">
-                                                                        <label class="">
-                                                                            Недоліки
-                                                                        </label>
-                                                                        <!-- Поле с Недоліки -->
-                                                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
-                                                                            <input name="trouble" type="text"
-                                                                                   class="contact-form__input form-control contact-form__input_trouble"
-                                                                                   placeholder="Недоліки">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group mb-3">
-                                                                        <label class="">
-                                                                            Коментар
-                                                                        </label>
-                                                                        <!-- Поле с Коментар -->
-                                                                        <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
-                                                                            <input name="comment" type="text"
-                                                                                   class="contact-form__input form-control contact-form__input_comment"
-                                                                                   placeholder="Недоліки">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
                                                                         <div class="form-group mb-3">
                                                                             <label class="">
-                                                                                Телефон
+                                                                                Оцінка(1-5☆)
                                                                             </label>
-                                                                            <!-- Поле с Коментар -->
-                                                                            <!-- Поле с Коментар -->
-                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
-                                                                                <input name="phone" type="text"
-                                                                                       class="contact-form__input form-control contact-form__input_phone"
-                                                                                       placeholder="Телефон">
+                                                                            <!-- Поле с Переваги -->
+                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_starCount">
+                                                                                <input name="starCount" type="text"
+                                                                                       class="contact-form__input form-control contact-form__input_starCount"
+                                                                                       placeholder="Оцените товар от 1-5">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mb-3">
+                                                                            <label class="">
+                                                                                Переваги
+                                                                            </label>
+                                                                            <!-- Поле с Переваги -->
+                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                                                                                <input name="name" type="text"
+                                                                                       class="contact-form__input form-control contact-form__input_name"
+                                                                                       placeholder="Переваги">
                                                                             </div>
                                                                         </div>
 
+                                                                        <div class="form-group mb-3">
+                                                                            <label class="">
+                                                                                Недоліки
+                                                                            </label>
+                                                                            <!-- Поле с Недоліки -->
+                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_trouble">
+                                                                                <input name="trouble" type="text"
+                                                                                       class="contact-form__input form-control contact-form__input_trouble"
+                                                                                       placeholder="Недоліки">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mb-3">
+                                                                            <label class="">
+                                                                                Коментар
+                                                                            </label>
+                                                                            <!-- Поле с Коментар -->
+                                                                            <div class="contact-form__input-wrapper contact-form__input-wrapper_comment">
+                                                                                <input name="comment" type="text"
+                                                                                       class="contact-form__input form-control contact-form__input_comment"
+                                                                                       placeholder="Недоліки">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="form-group mb-3">
+                                                                                <label class="">
+                                                                                    Телефон
+                                                                                </label>
+                                                                                <!-- Поле с Коментар -->
+                                                                                <!-- Поле с Коментар -->
+                                                                                <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+                                                                                    <input name="phone" type="text"
+                                                                                           class="contact-form__input form-control contact-form__input_phone"
+                                                                                           placeholder="Телефон">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-form__input-wrapper">
+                                                                            <input type="file" name="files[]"
+                                                                                   id="contact-form__input_file"
+                                                                                   class="contact-form__input contact-form__input_file"
+                                                                                   multiple>
+                                                                            <label for="contact-form__input_file"
+                                                                                   class="contact-form__file-button">
+                                                                                <span class="contact-form__file-text">Выберите файл</span>
+                                                                            </label>
+                                                                        </div>
 
-                                                                    </div>
-                                                                    <div class="contact-form__input-wrapper">
-                                                                        <input type="file" name="files[]"
-                                                                               id="contact-form__input_file"
-                                                                               class="contact-form__input contact-form__input_file"
-                                                                               multiple>
-                                                                        <label for="contact-form__input_file"
-                                                                               class="contact-form__file-button">
-                                                                            <span class="contact-form__file-text">Выберите файл</span>
-                                                                        </label>
-                                                                    </div>
+                                                                        <!--Поле с темой в письме-->
+                                                                        <input name="theme" type="hidden"
+                                                                               class="contact-form__input form-control contact-form__input_theme"
+                                                                               value="Оценочкая форма с карточки товара">
+                                                                        <input name="theme1" type="hidden"
+                                                                               class="contact-form__input form-control contact-form__input_theme1"
+                                                                               value="---------------------------">
 
-
-                                                                    <!--Поле с темой в письме-->
-                                                                    <input name="theme" type="hidden"
-                                                                           class="contact-form__input form-control contact-form__input_theme"
-                                                                           value="Оценочкая форма с карточки товара">
-                                                                    <input name="theme1" type="hidden"
-                                                                           class="contact-form__input form-control contact-form__input_theme1"
-                                                                           value="---------------------------">
-
-                                                                    <!--Кнопка отправки формы-->
-                                                                    <div class="pt-3">
-                                                                        <button type="submit"
-                                                                                class="contact-form__button btn btn-lg btn-primary w-100">
-                                                                            Отправить
-                                                                        </button>
-                                                                    </div>
-
-
-                                                                </form>
-
-
+                                                                        <!--Кнопка отправки формы-->
+                                                                        <div class="pt-3">
+                                                                            <button type="submit"
+                                                                                    class="contact-form__button btn btn-lg btn-primary w-100">
+                                                                                Отправить
+                                                                            </button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <!-- -------------------- -->
                                                     </div>
-
-
-                                                    <!-- -------------------------------------------------------------------------------- -->
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
-</div>
-
+</template>
+<div id="outProduct"></div>
 
 <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
      aria-labelledby="exampleModalCenteredScrollableTitle" style="display: none;" aria-hidden="true">
@@ -748,7 +716,7 @@
 
 <script>
 
-    // Кастомизация поля с файлом. Подробнее тут: https://smartlanding.biz/stilizaciya-input-type-file.html
+    // Кастомизация поля с файлом
     let inputs = document.querySelectorAll('.contact-form__input_file');
     Array.prototype.forEach.call(inputs, function (input) {
         let label = input.nextElementSibling,
@@ -805,5 +773,6 @@
 <script src="../assets/js/scripts.js"></script>
 <script src="assets/js/mustache.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/product.js"></script>
 </body>
 </html>
