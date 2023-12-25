@@ -13,11 +13,11 @@ const product = products[productID-1];
 let html = Mustache.render(templateL, product);
 out.insertAdjacentHTML("beforeend", html);
 
-
-$('#lightSlider').lightSlider({
-    gallery: true,
-    item: 1,
-    loop:true,
-    slideMargin: 0,
-    thumbItem: 9
+$(document).ready(function() {
+    $('#imageGallery').lightSlider({
+        gallery:true,
+        minSlide:1,
+        maxSlide:1,
+        currentPagerPosition:'left'
+    });
 });

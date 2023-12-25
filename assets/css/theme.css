@@ -9836,6 +9836,7 @@ input[type="range"]::-moz-range-thumb {
 .text-blue{
   color: #3E77AA;
 }
-
-
+ul {
+  list-style-type: none;
+}
 
