@@ -261,7 +261,7 @@
                                     <ul class="list_brand sub-menu-links">
                                         <li>
                                             <div class="custome-checkbox base-text">
-                                                <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" checked>
+                                                <input class="form-check-input" type="checkbox" name="checkbox" id="Arrivals1" value="AOC" >
                                                 <label class="form-check-label" for="Arrivals1"><span>AOC</span></label>
                                             </div>
                                         </li>
@@ -286,7 +286,7 @@
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
                                                        id="Arrivals4" value="">
                                                 <label class="form-check-label" for="Arrivals4">
-                                                    <span>BenQ</span></label>
+                                                    <span>Sumsung</span></label>
                                             </div>
                                         </li>
                                         <li>
@@ -294,7 +294,7 @@
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
                                                        id="Arrivals5" value="">
                                                 <label class="form-check-label" for="Arrivals5">
-                                                    <span>Dell</span></label>
+                                                    <span>MSI</span></label>
                                             </div>
                                         </li>
                                         <li>
@@ -302,7 +302,7 @@
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
                                                        id="Arrivals6" value="">
                                                 <label class="form-check-label" for="Arrivals6">
-                                                    <span>Gygabyte</span></label>
+                                                    <span>ASRock</span></label>
                                             </div>
                                         </li>
                                         <li>
@@ -399,21 +399,23 @@
                     <div class="col-12 p-1">
                         <div class="product_header">
                             <div class="product_header_left d-flex align-items-center">
-                                <div class="pl20">
-                                    <div class="hr-dashed">
-                                        <a href="#"> Скинути фільтри</a>
-                                    </div>
-                                </div>
+<!--                                <div class="pl20">-->
+<!--                                    <div class="hr-dashed">-->
+<!--                                        <a href="#"> Скинути фільтри</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                             </div>
                             <div class="product_header_right align-items-center">
                                 <div class="custom_select">
                                     <select class="form-control form-control-sm f11 h-25">
-                                        <option value="order">По популярності</option>
-                                        <option value="popularity">По ціні</option>
-                                        <option value="date">По даті</option>
+                                        <option  value="order">По популярності</option>
+                                        <option id="sort-price12" >По ціні(зростання)</option>
+                                        <option id="sort-price22" >По ціні(спадання )</option>
                                         <option value="price">По назві</option>
                                     </select>
                                 </div>
+                                <button id="sort-price1" >По ціні(зростання)</button>
+                                <button id="sort-price2" >По ціні(зростання)</button>
                             </div>
                         </div>
                     </div>
@@ -466,7 +468,7 @@
                             </div>
                         </template>
                         <div class="container mt-3 ">
-                            <div class="row" id="output">
+                            <div class="row good-wraps" id="output">
 
                             </div>
                         </div>
@@ -716,6 +718,7 @@
     });
 
 </script>
+<script src="assets/js/toprightsort.js"></script>
 <script src="assets/js/mustache.js"></script>
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
