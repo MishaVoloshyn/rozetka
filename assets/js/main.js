@@ -465,8 +465,8 @@ document.getElementById("promoCode").addEventListener("change", (e) => {
     // Получить значение промокода из input-элемента
     let promo = e.target.value;
 
-    // Проверить промокод
-    let isPromoCodeValid = checkPromoCode(promo);
+        // Проверить промокод
+        let isPromoCodeValid = checkPromoCode(promo);
 
     // Показать сообщение о результате проверки
     let promoCodeStatus = document.getElementById("promoCodeStatus");
@@ -549,11 +549,11 @@ const buttonClose = e => {
     // listCards.splice(btnId, 1);
     // renderCart();
 
-}
-for (let button of closeBtn) {
-    console.log("click!");
-    button.addEventListener("click", buttonClose);
-}
+    }
+    for (let button of closeBtn) {
+        console.log("click!");
+        button.addEventListener("click", buttonClose);
+    }
 
 
 
